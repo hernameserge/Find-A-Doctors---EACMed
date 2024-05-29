@@ -519,12 +519,12 @@ $(document).ready(function(){
               <div class="InputFieldForm">
                 <i>Status:</i>
               </div>
-              <!-- <div class="InputFieldForm">
+              <div class="InputFieldForm">
                 <i>First Name:</i>
               </div>
               <div class="InputFieldForm">
                 <i>First Name:</i>
-              </div> -->
+              </div>
             </div>
 
             <div class="AddDoctorDivContainer-Bottom">
