@@ -1,0 +1,351 @@
+
+
+/* font-family: 'Roboto Condensed', sans-serif; */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap'); */
+
+@font-face {
+  font-family: Poppins_Bold;
+  src: url(./Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: Poppins_ExtraLight;
+  src: url(./Poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: Poppins_LightItalic;
+  src: url(./Poppins/Poppins-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: Poppins_Regular;
+  src: url(./Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins_Light;
+  src: url(./Poppins/Poppins-Light.ttf);
+}
+
+
+
+
+
+:root{
+  --Color1: #ffffff;
+  --Color2: #eeeeee;
+  --Color3: #E0544F;
+  --Color4: #277540;
+  --Color5: #CC1C16;
+  --Color6: #318499;
+  --Color7: #3184996b;
+
+
+
+  /* --Color3: #000000;
+  --Color4: #000000;
+  --Color5: #AD2424;
+  --Color6: #E0544F;
+  --Color7: #277540;
+  --Color8: #318499;
+  --Color9: #665F42;
+  --Color10: #70987C; */
+
+  --BGColor1: #ffffff;
+  --BGColor2: #eeeeee;
+  --BGColor3: #1f1f1f;
+  --BGColor4: #013220;
+  
+  --BGColor5: #00000036;
+
+  --FontColor1: #ffffff;
+  --FontColor2: #1f1f1f;
+  --FontColor3: #277540;
+
+  --Border1: 1px solid #00000036;
+  --Border2: 1px solid #00000026;
+  --BorderColor1: #00000036;
+
+  --BoxShadow: 0 0 5px #00000046;
+
+  --Font1_PoppinsBold: Poppins_Bold;
+  --Font2_PoppinsExtraLight: Poppins_ExtraLight;
+  --Font3_PoppinsLightItalic: Poppins_LightItalic;
+  --Font4_PoppinsRegular: Poppins_Regular; 
+  --Font5_PoppinsLight: Poppins_Light;
+}
+
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #979797; 
+}
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd7a;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1c1c1c; 
+} */
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #97979700; 
+}
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd7a;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1c1c1ca7; 
+}
+
+
+.Dashboard-Table::-webkit-scrollbar, .Dashboard-Box2-Chart::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: var(--fontFam1); */
+  outline: none;
+  scroll-behavior: smooth;
+  /* background-color: var(--BGColor1); */
+}
+
+h1, h3 {
+  font-family: var(--Font1_PoppinsBold)
+}
+
+h4, p, h2{
+  font-family: var(--Font2_PoppinsExtraLight)
+}
+
+
+
+img{
+  height: 100%;
+}
+input {
+  padding: 5px;
+  border: 1px solid #000000aa;
+}
+
+select{
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.InputText1{
+  border: 1px solid #0000004f;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+}
+.SearchDoctor input,.SearchDoctor i{
+  background-color:#00000000;
+  z-index: 1;
+}
+.HoverP{
+  position: absolute;
+  top: 0;
+  color: #181818;
+  height: 100%;
+  padding: 0 5px;
+  background-color: var(--BGColor1);
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+  z-index: 0;
+}
+
+.Flex{
+  display: flex;
+  gap: 10px;
+}
+
+.InputText1:hover{
+  /* border: 1px solid #000000ce; */
+  border: 1px solid var(--Color6);
+}
+.InputText1:hover i{
+  color: var(--Color6);
+}
+
+.InputText1 input{
+  border: none;
+  border-left: 1px solid #00000047;
+  padding-left: 10px;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.SearchBorder{
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #00000000;
+}
+
+.InputText2{
+  border:1px solid var(--BorderColor1);
+  min-width: 200px;
+  padding: 10px 10px;
+}
+
+button{
+  /* background-color: var(--Color6); */
+  padding: 5px 10px;
+  border: var(--Border2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* color: var(--Color1); */
+  /* box-shadow: var(--BoxShadow); */
+}
+button:hover{
+  background-color: var(--Color6);
+  color: var(--Color1);
+}
+
+button i{
+  color: var(--Color1);
+}
+button:hover i{
+  color: var(--Color1);
+}
+
+.CircleDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--BorderColor1);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.CircleDiv:hover{
+  background-color: var(--Color3);
+  color: var(--Color1);
+}
+.CircleDiv:hover i{
+  color: var(--Color1);
+}
+
+.Flex{
+  display: flex;
+}
+
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--AddBackColor1);
+}
+.TbodyTr:hover{
+  background-color: var(--Color3);
+  color: var(--Color1);
+  cursor: pointer;
+}
+tr td{
+  margin-bottom: 1px solid var(--BorderColor1);
+}
+table tr td{
+  text-align: center;
+  font-family: var(--Font4_PoppinsRegular);
+  padding: 5px 0;
+}
+.Img-Table{
+  height: 50px;
+}
+td{
+  padding: 2px;
+  white-space: nowrap; 
+  max-width:  80px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  font-family: var(--Font4_PoppinsRegular);
+}
+th, li{
+  padding: 6px 2px;
+  text-wrap: nowrap;
+  font-family: var(--Font4_PoppinsRegular);
+}
+
+.TableFlex1{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.fa-solid{
+  color: #272727;
+}
+
+.XCursor{
+  cursor: pointer;
+  opacity: .6;
+}
+.XCursor:hover{
+  opacity: 1;
+}
+
+
+
+
+
+/* .BBottom{
+  height: ;
+  padding-top: 10px;
+} */
+
+
+.D1{
+  animation-name: D1;
+  animation-duration: 1s;
+}
+@keyframes D1 {
+  0%{opacity: 0;}
+}
+
+
+
+
+.SDiv{
+  display: none;
+}
+
+.Italic{
+  font-family: var(--Font3_PoppinsLightItalic);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .HDiv{
+    display: none;
+  }
+  .SDiv{
+    display: flex;
+  }
+  
+  
+}

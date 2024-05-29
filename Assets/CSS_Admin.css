@@ -1,0 +1,503 @@
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.tooltip:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* ================================ */
+
+
+
+.Admin-LoginPage{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Admin-LoginDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px;
+}
+.Admin-LoginLogo img{
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+.Admin-LoginPageForm{
+  height: 370px;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid var(--BorderColor1);
+  background-color: var(--BGColor4);
+  border: var(--BorderColor1);
+  box-shadow: -2px 5px 25px #00000017;
+  padding: 40px;
+  color: var(--Color1);
+}
+
+
+
+
+
+
+/* Admin */
+.AdminDiv{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  transition: 1s;
+  /* overflow: hidden; */
+}
+
+
+.AdminSidebar{
+  min-width: 250px;
+  max-width: 250px;
+  grid-area: ASB;
+  border-right: 1px solid var(--BorderColor1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.AdminSidebarDiv1{
+  padding: 10px;
+  box-shadow: 0 0 2px #00000036;
+  
+  border-bottom: 1px solid var(--BorderColor1);
+}
+.AdminSidebarDiv1IMG{
+  width: 100%;
+}
+.AdminSidebarDiv1IMG img{
+  width: 100%;
+}
+
+.AdminSidebarDiv2{
+  height: 100%;
+  padding: 10px;
+  overflow: auto;
+}
+.AdminSidebarDiv2 ul{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.AdminSidebarDiv2 ul li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.AdminSidebarDiv2 ul li svg{
+  height: 35px;
+}
+.AdminSidebarDiv2 ul li:hover{
+  background-color: var(--Color3);
+  color: var(--Color1);
+  fill: white;
+  padding-left: 10px;
+}
+
+
+.Sidebar_Active{
+  background-color: var(--Color4);
+  color: var(--Color1);
+  fill: white;
+  padding-left: 10px;
+}
+
+.AdminSidebarDiv2::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+.AdminSidebarDiv3{
+  padding: 10px;
+  box-shadow: 0 0 2px #00000036;
+  border-top: 1px solid var(--BorderColor1);
+}
+.AdminSidebarDiv3 button{
+  width: 100%;
+}
+
+.AdminMain{
+  width: 100%;
+  background-color: var(--BGColor2);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+
+.AdminMainDiv{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--BGColor2);
+  overflow: auto;
+  height: 100%;
+}
+.DoctorsDiv, .AccountsDiv, .ActivityLogs, .ArchivesDiv, .DoctorsViewPanel{
+  display: none;
+}
+
+.AdminDashboard-Header{
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--BGColor1);
+  border-bottom: 1px solid var(--BorderColor1);
+}
+
+.AdminDashboard-Profile-Box{
+  border-radius: 8px;
+  border: 1px solid var(--BorderColor1);
+  padding: 2px 8px;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.AdminDashboard-Profile-Box-Circle{
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  border: 1px solid var(--BorderColor1);
+}
+
+.AdminDashboard-Container{
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.AdminDashboard-Panel{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  height: 100%;
+}
+
+.AdminDashboard-Panel-Div{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+.Dashboard-Box1-Ch{
+  height: fit-content;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  padding: 5px;
+}
+
+.Dashboard-Box-Total{
+  line-height: 25px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--BGColor1);
+  box-shadow: 0 2px 4px #00000029;
+  border: 1px solid var(--BorderColor1);
+  border-radius: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.Dashboard-Box-Total:hover{
+  scale: 115%;
+  z-index: 1000;
+}
+.Dashboard-Box-Total:hover i{
+  color: var(--Color4);
+}
+.Dashboard-Box-Total p{
+  font-size: 12px;
+  text-wrap: nowrap;
+  margin-top: -5px;
+}
+.Dashboard-Box-Total h2{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Dashboard-Box-Total h2 i{
+  font-size: 20px;
+  color: var(--Color3);
+}
+
+
+.Dashboard-Box2-Ch{
+  background-color: var(--BGColor1);
+  border: 1px solid var(--BorderColor1);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.Dashboard-Box2-Header{
+  background-color: var(--BGColor1);
+  padding: 5px 10px;
+  display: flex;
+  border-bottom: 1px solid var(--BorderColor1);
+}
+
+.Dashboard-Box2-Chart{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto  ;
+  padding: 5px 10px;
+}
+
+#chart {
+  width: 100%;
+  min-height: 200px;
+}
+
+#chart2{
+  width: 100%;
+  min-height: 200px;
+  /* display: none; */
+}
+
+.AdminDashboard-Box2{
+  max-width: 300px;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--BorderColor1);
+  background-color: var(--BGColor1);
+}
+
+.Dashboard-Table{
+  height: 100%;
+  background-color: var(--BGColor1);
+  border: 1px solid var(--BorderColor1);
+  border-radius: 5px;
+  box-shadow: 0 0 5px #0000004a;
+}
+
+.Dashboard-Table table tr td{
+  font-size: 12px;
+  padding: 5px 10px;
+  border-top: 1px solid var(--BorderColor1);
+}
+.Dashboard-Table table tr{
+  transition: 0.1s;
+  cursor: pointer;
+}
+.Dashboard-Table table tr:hover{
+  background-color: var(--Color4);
+  color: var(--Color1);
+}
+
+.Dashboard-Table1{
+  height: 200px;
+  overflow: auto;
+}
+
+.Dashboard-Table1{
+  min-height: 200px;
+}
+.Dashboard-Table2{
+  height: 300px;
+  overflow: auto;
+}
+
+.Dashboard-Table2{
+  height: 100%;
+}
+
+.Dashboard-Table-Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--BGColor1);
+  box-shadow: 0 2px 4px #00000036;
+  padding:  0 5px;
+}
+.Dashboard-Table-Header p{
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Doctors Div */
+.DoctorsDiv{
+  background-color: var(--BGColor1);
+  position: relative;
+}
+.DoctorsDivHeader{
+  border-bottom: var(--Border1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  padding: 0 10px;
+}
+.DoctorDivTableContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  overflow: auto;
+}
+
+.DoctorDivTable{
+  display: flex;
+  width: 100%;
+}
+.DoctorDivTableTbody{
+  width: 100%;
+}
+.THeader{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.DoctorDivTableTr{
+  display: flex;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  transition: .2s;
+}
+.DoctorDivTableTr:hover{
+  background-color: var(--Color6);
+  color: var(--Color1);
+  scale: 101%;
+}
+.TableBorder{
+  display: flex;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: var(--Border1);
+}
+.DoctorDivTableTd{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.DoctorDivTablePagination{
+  padding: 5px 40px;
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  box-shadow: var(--BoxShadow);
+}
+
+
+
+.AddDoctorDiv{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00000036;
+  display: none;
+  justify-content: end;
+
+}
+.AddDoctorDivContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Color1);
+  width: 500px;
+  height: 100%;
+  box-shadow: 0 0 10px #00000022;
+  animation-name: AddDoctorDivContainer;
+  animation-duration: 1s;
+  padding: 20px;
+}
+
+.AddDoctorDivContainer-Header{
+  display: flex;
+  padding: 0 0 10px 0;
+}
+
+.AddDoctorDivContainer-Form{
+  height: 100%;
+  background-color: var(--BGColor1);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.InputFieldForm{
+  display: flex;
+  align-items: center;
+}
+.InputFieldForm i {
+  min-width: 100px;
+}
+.InputFieldForm input {
+  width: 100%;
+  border: var(--Border1);
+}
+
+.AddDoctorDivContainer-Bottom{
+  padding: 10px 0 0 0;
+  display: flex;
+  gap: 10px;
+}
+.AddDoctorDivContainer-Bottom button{
+  width: 100%;
+}
+
+
+
+@keyframes AddDoctorDivContainer {
+  0%{margin-right: -200px;}
+}
+
+@media only screen and (max-width: 600px) {
+
+}
