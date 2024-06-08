@@ -293,8 +293,9 @@ svg{
 
 .AllToday button{
   min-width: 80px;
-  border: none;
-  color: #00000068;
+  border: var(--Border2);
+  color: #000000b0;
+  background-color: var(--Color1);
 }
 .AllToday .BtnDiv{
   border-left: 1px solid var(--BorderColor1);
@@ -302,6 +303,7 @@ svg{
 
 .AllToday .TodayBtnActive{
   background-color: var(--Color4);
+  border: var(--Border2);
   color: white;
 }
 
@@ -348,7 +350,7 @@ svg{
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: move 4s linear infinite;
+  animation: move 2s linear infinite;
   overflow: auto;
   z-index: 50;
 }
@@ -1050,18 +1052,6 @@ svg{
   content: "";
 }
 
-
-.PopMsgDiv{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  padding: 10px;
-  height: fit-content;
-  width: 300px;
-  border: 1px solid var(--BorderColor1);
-  border-radius: 10px;
-}
 
 
 

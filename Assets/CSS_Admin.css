@@ -1,5 +1,42 @@
+.Dashboard-Table::-webkit-scrollbar, .Dashboard-Box2-Chart::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #97979700; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--Color6A);
+  /* background: yellow; */
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  /* background: #1c1c1ca7;  */
+  background: var(--Color6);
+}
+
+
+
+
+
+
+
+.Hide{
+  display: none;
+}
+
 .tooltip {
   position: relative;
+}
+
+.Btn_1{
+  border-radius: 4px;
 }
 
 .tooltip::before {
@@ -22,6 +59,7 @@
   visibility: visible;
   opacity: 1;
 }
+
 
 
 /* ================================ */
@@ -136,11 +174,6 @@
   padding-left: 10px;
 }
 
-.AdminSidebarDiv2::-webkit-scrollbar {
-  width: 10px;
-  height: 0px;
-}
-
 .AdminSidebarDiv3{
   padding: 10px;
   box-shadow: 0 0 2px #00000036;
@@ -220,10 +253,6 @@
   height: 100%;
 }
 
-
-
-
-
 .Dashboard-Box1-Ch{
   height: fit-content;
   gap: 10px;
@@ -300,7 +329,6 @@
 #chart2{
   width: 100%;
   min-height: 200px;
-  /* display: none; */
 }
 
 .AdminDashboard-Box2{
@@ -315,14 +343,27 @@
 
 .Dashboard-Table{
   height: 100%;
+  width: 100%;
   background-color: var(--BGColor1);
   border: 1px solid var(--BorderColor1);
   border-radius: 5px;
   box-shadow: 0 0 5px #0000004a;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Dashboard-Table table{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
 }
 
 .Dashboard-Table table tr td{
   font-size: 12px;
+  width: 100%;
+  text-align: left;
   padding: 5px 10px;
   border-top: 1px solid var(--BorderColor1);
 }
@@ -367,136 +408,37 @@
   cursor: pointer;
 }
 
-/* Doctors Div */
-.DoctorsDiv{
-  background-color: var(--BGColor1);
-  position: relative;
-}
-.DoctorsDivHeader{
-  border-bottom: var(--Border1);
+
+
+
+
+/* ======== */
+.MainDiv-Header{
+  width: 100%;
+  height: 50px;
+  background-color: var(--Color1);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 50px;
-  padding: 0 10px;
+  padding: 0 20px;
+  border-bottom: var(--Border1);
 }
-.DoctorDivTableContainer{
+
+.MainDiv-Header-Right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.MainDiv-Main{
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  overflow: auto;
   padding: 10px;
-  overflow: auto;
 }
 
-.DoctorDivTable{
-  display: flex;
-  width: 100%;
-}
-.DoctorDivTableTbody{
-  width: 100%;
-}
-.THeader{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.DoctorDivTableTr{
-  display: flex;
-  width: 100%;
-  padding: 5px 10px;
-  margin-bottom: 5px;
-  transition: .2s;
-}
-.DoctorDivTableTr:hover{
-  background-color: var(--Color6);
-  color: var(--Color1);
-  scale: 101%;
-}
-.TableBorder{
-  display: flex;
-  width: 100%;
-  padding: 5px 10px;
-  border-radius: 10px;
-  border: var(--Border1);
-}
-.DoctorDivTableTd{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-}
-.DoctorDivTablePagination{
-  padding: 5px 40px;
-  display: flex;
-  justify-content: end;
-  gap: 5px;
-  box-shadow: var(--BoxShadow);
-}
-
-
-
-.AddDoctorDiv{
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #00000036;
-  display: none;
-  justify-content: end;
-
-}
-.AddDoctorDivContainer{
-  display: flex;
-  flex-direction: column;
-  background-color: var(--Color1);
-  width: 500px;
-  height: 100%;
-  box-shadow: 0 0 10px #00000022;
-  animation-name: AddDoctorDivContainer;
-  animation-duration: 1s;
-  padding: 20px;
-}
-
-.AddDoctorDivContainer-Header{
-  display: flex;
-  padding: 0 0 10px 0;
-}
-
-.AddDoctorDivContainer-Form{
-  height: 100%;
-  background-color: var(--BGColor1);
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.InputFieldForm{
-  display: flex;
-  align-items: center;
-}
-.InputFieldForm i {
-  min-width: 100px;
-}
-.InputFieldForm input {
-  width: 100%;
-  border: var(--Border1);
-}
-
-.AddDoctorDivContainer-Bottom{
-  padding: 10px 0 0 0;
-  display: flex;
-  gap: 10px;
-}
-.AddDoctorDivContainer-Bottom button{
-  width: 100%;
-}
-
-
-
-@keyframes AddDoctorDivContainer {
-  0%{margin-right: -200px;}
-}
 
 @media only screen and (max-width: 600px) {
 

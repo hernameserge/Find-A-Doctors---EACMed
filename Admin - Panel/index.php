@@ -8,23 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-  
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <link href = "../Assets/Images/EACMC_LOGO 1.png" rel="icon" type="image/png">
-  <link rel="stylesheet" href="../Assets/CSS_Admin.css?ver=<?php echo time();?>">
   <link rel="stylesheet" href="../Assets/CSS_Public.css?ver=<?php echo time();?>">
+  <link rel="stylesheet" href="../Assets/CSS_Admin.css?ver=<?php echo time();?>">
   <title>EACMed - Admin</title>
-
-
-  <script>
-$(document).ready(function(){
-    $('a').hover(function(){
-        $(this).data('href', $(this).attr('href')).removeAttr('href');
-    }, function(){
-        $(this).attr('href', $(this).data('href'));
-    });
-});
-</script>
 </head>
 <body>
   <div class="AdminDiv">
@@ -42,7 +30,7 @@ $(document).ready(function(){
         </ul>
       </div>
       <div class="AdminSidebarDiv3">
-        <button>Logout</button>
+        <button class="Btn_1"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
       </div>
     </section>
 
@@ -95,26 +83,16 @@ $(document).ready(function(){
                   <h4>Chart</h4>
                 </div>
                 <div class="Dashboard-Box2-Chart">
- 
                     <div class="">
                       <h4>TOP 5 Specification</h4>
                       <div id="DIV">
                         <div id="chart"></div>
                       </div>
                     </div>
-
                     <div class="">
                       <h4>TOP 5 HMO</h4>
                       <div id="chart2"></div>
                     </div>
-
-
-
-
-
-
-                
-                
                 </div>
               </div>
             </div>
@@ -263,280 +241,51 @@ $(document).ready(function(){
           </div>
         </div>
       </div>
+
       <!-- Doctors -->
       <div class="DoctorsDiv AdminMainDiv">
-        <div class="DoctorsDivHeader">
-          <button class="BtnAddDoctor">Add Doctor</button>
-          <input type="text" placeholder="Search Doctor's">
-        </div>
-        <div class="DoctorDivTableContainer">
+        <div class="MainDiv-Header">
+          <div class="">
+            <h4>Doctor</h4>
+          </div>
 
-
-          <div class="DoctorDivTable">
-            <div class="DoctorDivTableTbody">
-              <div class="DoctorDivTableTr">
-                <div class="DoctorDivTableTd THeader">Name</div>
-                <div class="DoctorDivTableTd THeader">Specialization</div>
-                <div class="DoctorDivTableTd THeader">Secretary</div>
-                <div class="DoctorDivTableTd THeader">Room</div>
-                <div class="DoctorDivTableTd THeader">Total No.</div>
-                <div class="DoctorDivTableTd THeader">Status</div>
-                <div class="DoctorDivTableTd THeader">Action</div>
-              </div>
-
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
-              <div class="DoctorDivTableTr TableBorder">
-                <div class="DoctorDivTableTd">France Joshua ALfelor</div>
-                <div class="DoctorDivTableTd">Internal Medicine</div>
-                <div class="DoctorDivTableTd">Sophia Marie L. Cruz</div>
-                <div class="DoctorDivTableTd">2nd Floor - Room 2408</div>
-                <div class="DoctorDivTableTd">78</div>
-                <div class="DoctorDivTableTd">Active</div>
-                <div class="DoctorDivTableTd"><div class="TableFlex1"><button>View</button></div></div>
-              </div>
+          <div class="MainDiv-Header-Right">
+            <button class="Btn_1"><i class="fa-solid fa-plus"></i> Add Doctor</button>
+            <div class="InputText3">
+              <input type="text" placeholder="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
         </div>
+        <div class="MainDiv-Main DoctorsDiv-Main">
 
-        <div class="DoctorDivTablePagination">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
+
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Specialization</td>
+                <td>Secretary</td>
+                <td>Room</td>
+                <td>HMO</td>
+                <td>Status</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>France</td>
+                <td>Internal Medicine</td>
+                <td>Sophia Marie L. Cruz</td>
+                <td>2nd Floor - Room 2408</td>
+                <td>78</td>
+                <td>Active</td>
+                <td><button class="Btn_1">View</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
-
-        <div class="AddDoctorDiv">
-          <div class="AddDoctorDivContainer">
-            <div class="AddDoctorDivContainer-Header">
-              <h3><i class="fa-solid fa-user-plus"></i> Add Doctor</h3>
-            </div>
-          
-            <div class="AddDoctorDivContainer-Form">  
-              <div class="InputFieldForm">
-                <i>Last Name:</i>
-                <input type="text" placeholder="Last Name">
-              </div>
-              <div class="InputFieldForm">
-                <i>First Name:</i>
-                <input type="text" placeholder="First Name">
-              </div>
-              <div class="InputFieldForm">
-                <i>Gender:</i>
-                <select name="" id="">
-                  <option value="">Male</option>
-                  <option value="">Female</option>
-                </select>
-              </div>
-              <div class="InputFieldForm">
-                <i>Status:</i>
-              </div>
-              <div class="InputFieldForm">
-                <i>First Name:</i>
-              </div>
-              <div class="InputFieldForm">
-                <i>First Name:</i>
-              </div>
-            </div>
-
-            <div class="AddDoctorDivContainer-Bottom">
-              <button>Save</button>
-              <button>Cancel</button>
-            </div>
-          </div>
-        </div>
-
       </div>
-
-
 
       <!-- Accounts -->
       <div class="AccountsDiv AdminMainDiv">
@@ -550,25 +299,9 @@ $(document).ready(function(){
       <div class="ArchivesDiv AdminMainDiv">
         <h4>Archives Logs</h4>
       </div>
-
-
-
-
-
     </section>
-    
   </div>
-  
-
-
-
-
-
-
-
-
-
-
 <script type="text/javascript" src="../Assets/JS_Admin.js?ver=<?php echo time();?>"></script>
 </body>
 </html>
+

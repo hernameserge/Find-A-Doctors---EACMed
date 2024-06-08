@@ -1,15 +1,10 @@
 <?php
-
 include '../Config/Configure.php';
-
 
 date_default_timezone_set("Asia/Manila");
 $Date = date("Y-m-d");
 $Time = date("h:i:sa");
 $Day = date('l');
-// $Day = "Sunday";
-
-
 
 if(isset($_POST["DoctorID"])){
   global $connMysqli;
@@ -23,8 +18,6 @@ if(isset($_POST["DoctorID"])){
     $DSex1 = $row['sex'];
     if($DSex1 == "Male"){$DR_SexColor = "ModalContainerProfileBorder1";} else{$DR_SexColor = "ModalContainerProfileBorder2";}
     echo "
-
-
       <div class='HomeMain-ModalContainer'>
         <div class='ModalContainer1'>
           <div class='ModalContainerDiv1'>
@@ -58,8 +51,6 @@ if(isset($_POST["DoctorID"])){
           </div>
         </div>
         <div class='ModalContainer2 D1'>
-          
-          
           <div class='ModalContainer2Div1'>
             <div class='ModalContainer2DivTitle'>
               <p>Sub-specialization:</p>
@@ -92,17 +83,13 @@ if(isset($_POST["DoctorID"])){
                   echo"
               </ul>
             </div>
-            
           </div>
           <br>
-
           <div class='ModalContainer2Div3'>
             <div class='ModalContainer2Div3Div'>
               <div class='Div3DivLi'>
                 <p>Clinic Secretary:</p>          
               </div>
-
-
               ";
               $DoctorSecretary1 = "SELECT * FROM doctor_secretary WHERE secretary_doctor_id = $DID";
               $DoctorSecretary1 = mysqli_query($connMysqli,$DoctorSecretary1);
@@ -110,12 +97,8 @@ if(isset($_POST["DoctorID"])){
                 
                 $SecID= $row7['doctor_secretary_id'];
                 echo "
-
-
                 <div class='SecretaryDiv'>
                   <h4>".$row7['doctor_secretary_first_name']."</h4>
-
-
                   ";
                   $DoctorsSecNumber1 = "SELECT * FROM doctor_secretary WHERE doctor_secretary_id = $SecID";
                   $DoctorsSecNumber1 = mysqli_query($connMysqli,$DoctorsSecNumber1);
@@ -126,8 +109,6 @@ if(isset($_POST["DoctorID"])){
                     echo"
 
                 </div>
-
-
               ";};
                 echo"
             </div>
@@ -146,21 +127,9 @@ if(isset($_POST["DoctorID"])){
                 <div class='doctor_room'><h4>".$row5['doctor_room_number']."</h4></div>
               ";};
                 echo"
-
-
-
-             
               </div>
             </div>
-
-            
-
-
           </div>
-
-          
-      
-
           <div class='ModalContainer2Div5'>
             <div class='ModalContainer2DivTitle'>
               <div class='ModalContainer3Div1Header'>
@@ -202,17 +171,12 @@ if(isset($_POST["DoctorID"])){
                   echo"
               </div>
             </div>
-            
-
           </div>
         </div>
       </div>
-
     ";
   }
 }
-
-
 
 if(isset($_POST["SearchDoc"])){
   global $connMysqli;
@@ -226,11 +190,7 @@ if(isset($_POST["SearchDoc"])){
     $SearchResult = mysqli_query($connMysqli, $SearchResult);
   }
 
-
-
   if($SearchResult->num_rows > 0){
-
-
     while($row = mysqli_fetch_assoc($SearchResult)){
       $DID = $row['doctor_id'];
       $DSex = $row['sex'];
@@ -305,7 +265,7 @@ if(isset($_POST["SearchDoc"])){
             </div>
           </div>
           <div class='Main_Div1-Box2Flex2'>
-            <button>More Details <i class='fa-solid fa-arrow-right'></i></button>
+            <button class='Btn_2'>More Details <i class='fa-solid fa-arrow-right'></i></button>
           </div>
         </div>
       </div>
@@ -316,9 +276,6 @@ if(isset($_POST["SearchDoc"])){
     echo "<div class='NotFoundDiv'><h1>No results found for the specified doctor's name</h1></div>";
   }
 }
-
-
-
 
 if(isset($_POST["SearchDocSpecs"])){
   global $connMysqli;
@@ -337,7 +294,6 @@ if(isset($_POST["SearchDocSpecs"])){
   }
 }
 
-
 if(isset($_POST["SearchSubSpecs2"])){
   global $connMysqli;
   $SearchSubSpecs2 = $_POST["SearchSubSpecs2"];
@@ -353,7 +309,6 @@ if(isset($_POST["SearchSubSpecs2"])){
     echo "<p>Nothing found!</p>";
   }
 }
-
 
 if(isset($_POST["SearchHMO"])){
   global $connMysqli;
@@ -377,10 +332,6 @@ if(isset($_POST["SearchHMO"])){
     echo "<p>Nothing found!</p>";
   }
 }
-
-
-
-
 
 if(isset($_POST["Clear1"])){
   global $connMysqli;
@@ -463,14 +414,12 @@ if(isset($_POST["Clear1"])){
           </div>
         </div>
         <div class='Main_Div1-Box2Flex2'>
-          <button>More Details <i class='fa-solid fa-arrow-right'></i></button>
+          <button class='Btn_2'>More Details <i class='fa-solid fa-arrow-right'></i></button>
         </div>
       </div>
     </div>
   ";}
 }
-
-
 
 if(isset($_POST["SelectSpecsID"])){
   global $connMysqli;
@@ -485,15 +434,6 @@ if(isset($_POST["SelectSpecsID"])){
 
   ";}
 }
-
-
-// if(isset($_POST["SubSpecsID"])){
-//   global $connMysqli;
-//   $SubSpecsID = $_POST["SubSpecsID"];
-//   echo $SubSpecsID;
-// }
-
-
 
 if(isset($_POST["BtnDocFill"])){
   global $connMysqli;
@@ -585,7 +525,7 @@ if(isset($_POST["BtnDocFill"])){
                 </div>
               </div>
               <div class='Main_Div1-Box2Flex2'>
-                <button>More Details <i class='fa-solid fa-arrow-right'></i></button>
+                <button class='Btn_2'>More Details <i class='fa-solid fa-arrow-right'></i></button>
               </div>
             </div>
           </div>
@@ -595,10 +535,8 @@ if(isset($_POST["BtnDocFill"])){
     }else{
       echo "<div class='NotFoundDiv'><h1>No Doctor/s available today</h1></div>";
     }
-
   }
   else{
-
     $SearchResult2 = "SELECT * FROM doctor";
     $SearchResult2 = mysqli_query($connMysqli, $SearchResult2);
 
@@ -676,22 +614,13 @@ if(isset($_POST["BtnDocFill"])){
             </div>
           </div>
           <div class='Main_Div1-Box2Flex2'>
-            <button>More Details <i class='fa-solid fa-arrow-right'></i></button>
+            <button class='Btn_2'>More Details <i class='fa-solid fa-arrow-right'></i></button>
           </div>
         </div>
       </div>
     ";}
-    
   }
 }
-
-
-
-
-
-
-  
-  
 
 if(isset($_POST["Filter_All"])){
   global $connMysqli;
@@ -771,7 +700,6 @@ if(isset($_POST["Filter_All"])){
         $Result
         ";  
   $SearchResult5 = mysqli_query($connMysqli, $SearchResult);
-
   while($row = mysqli_fetch_assoc($SearchResult5)){
     $DID = $row['doctor_id'];
     $DSex = $row['sex'];
@@ -846,12 +774,10 @@ if(isset($_POST["Filter_All"])){
           </div>
         </div>
         <div class='Main_Div1-Box2Flex2'>
-          <button>More Details <i class='fa-solid fa-arrow-right'></i></button>
+          <button class='Btn_2'>More Details <i class='fa-solid fa-arrow-right'></i></button>
         </div>
       </div>
     </div>
   ";}
 }
-
-
 ?>

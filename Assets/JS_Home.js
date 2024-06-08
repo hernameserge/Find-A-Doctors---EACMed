@@ -1,5 +1,3 @@
-// imusceramicbuilders@gmail.com
-// %ZU3E$VpYxw%t6A
 
 
 var screenWidth = $(window).width();
@@ -84,8 +82,7 @@ $(document).ready(function(){
     $('.TodayBtn2').addClass("TodayBtnActive");
     $(".TodayBtn2").siblings().removeClass("TodayBtnActive");
   })
-
-
+  
 
   $(".FilterFloatDivContainer0").click(function(){
     $('.FilterMobContainer').css("display","flex");
@@ -155,7 +152,6 @@ function functionHMO(functionHMOId){
     $(".HMOArrP").html(result2);
     FilterALl('Filter'); 
     $('.SearchPlaceholder4').css({"top":"-10px","left":"-20px","font-size":"12px","height":"fit-content","background-color":"white"});
-    
 }
 
 function ScreenModalToggle(){
@@ -558,6 +554,9 @@ function FilterALl(FilterAll){
     data: data,
     success: function(response){
       $('.Main_Div1-Section').html(response);
+      // window.location.href = 'https://example.com';
+      // console.log(response);
+      // window.location.href = './Admin - Panel';
     }
   });
 }

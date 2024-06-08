@@ -1,0 +1,171 @@
+
+        <div class="DoctorsDivHeader">
+          <div class="Flex">
+            <h4><i class="fa-solid fa-user-doctor"></i> DOCTORS</h4>
+          </div>
+          <div class="Flex">
+            <button class="BtnAddDoctor Btn_2"><i class="fa-solid fa-plus"></i> Add Doctor</button>
+            <div class="InputText3">
+              <input type="text" placeholder="Search Doctor's">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+          </div>
+        </div>
+        <!-- Table -->
+        <div class="DoctorDivTableContainer">
+        </div>
+
+        <div class="DoctorDivTablePagination">
+          <div class="Flex">
+            <p>Doctors</p>
+          </div>
+          <div class="Flex">
+            <button class="Btn_1">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+          </div>
+        </div>
+
+        <div class="AddDoctorDiv">
+          <div class="Close-AddDoctorDiv">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="">
+            <div class="AddDoctorDivContainer">
+              <div class="AddDoctorDivContainer-Header">
+                <h3><i class="fa-solid fa-user-plus"></i> Add Doctor</h3>
+              </div>
+              <div class="AddDoctorDivContainer-Form"> 
+                <h4>Doctor</h4>
+                <div class="InputFieldForm">
+                  <i>Last Name:</i>
+                  <input type="text" placeholder="Last Name">
+                </div>
+                <div class="InputFieldForm">
+                  <i>First Name:</i>
+                  <input type="text" placeholder="First Name">
+                </div>
+                <div class="InputFieldForm">
+                  <i>Gender:</i>
+                  <select name="" id="">
+                    <option value="" selected disabled>-</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                  </select>
+                </div>
+                <br>
+                <h4>Specialization</h4>
+                <div class="InputFieldForm">
+                  <i>Specialization:</i>
+                  <div class="Flex">
+                    <input type="text" placeholder="Specialization">
+                    <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+                <div class="InputFieldForm">
+                  <i></i>
+                  <div class="InformationField"></div>
+                </div>
+                <br>
+                <h4>Sub Specialization</h4>
+                <div class="InputFieldForm">
+                  <i>Sub Specialization:</i>
+                  <div class="Flex">
+                    <input type="text" placeholder="Sub Specialization">
+                    <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+                <div class="InputFieldForm">
+                  <i></i>
+                  <div class="InformationField"></div>
+                </div>
+                <br>
+                <h4>Category</h4>
+                <div class="InputFieldForm">
+                  <i>Category:</i>
+                  <select name="" id="">
+                    <option value="" selected disabled>-</option>
+                    <option value="">Regular Consultant</option>
+                    <option value="">Waiting Consultant</option>
+                  </select>
+                </div>
+                <br>
+                <h4>Primary Secretary</h4>
+                <div class="InputFieldForm">
+                  <i>Full Name:</i>
+                  <input type="text" placeholder="Full Name">
+                </div>
+                <div class="InputFieldForm">
+                  <i>Contact Number:</i>
+                  <input type="text" placeholder="09*********">
+                </div>
+                <div class="InputFieldForm">
+                  <i>Network:</i>
+                  <input type="text" placeholder="Ex. Smart, Globe">
+                </div>
+                <br>
+                <h4>Secondary Secretary</h4>
+                <div class="InputFieldForm">
+                  <i>Full Name:</i>
+                  <input type="text" placeholder="Full Name">
+                </div>
+                <div class="InputFieldForm">
+                  <i>Contact Number:</i>
+                  <input type="text" placeholder="09*********">
+                </div>
+                <div class="InputFieldForm">
+                  <i>Network:</i>
+                  <input type="text" placeholder="Ex. Smart, Globe">
+                </div>
+                <br>
+                <h4>Schedule</h4>
+                <div class="InputFieldForm">
+                  <i>Schedule:</i>
+                  <input type="text" placeholder="Schedule">
+                </div>
+                <div class="InputFieldForm">
+                  <i></i>
+                  <div class="InformationField"></div>
+                </div>
+                <br>
+                <h4>Room</h4>
+                <div class="InputFieldForm">
+                  <i>Room:</i>
+                  <div class="Flex">
+                    <input type="text" placeholder="Room">
+                    <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+                <div class="InputFieldForm">
+                  <i></i>
+                  <div class="InformationField"></div>
+                </div>
+                <br>
+                <h4>Teleconsultaion</h4>
+                <div class="InputFieldForm">
+                  <i>Teleconsultaion:</i>
+                  <input type="text" placeholder="Teleconsultaion">
+                </div>
+                <br>
+                <h4>HMO Accreditation</h4>
+                <div class="InputFieldForm">
+                  <i>HMO Accreditation:</i>
+                  <input type="text" placeholder="HMO Accreditation">
+                </div>
+                <div class="InputFieldForm">
+                  <i></i>
+                  <div class="InformationField"></div>
+                </div>
+
+              </div>
+
+              <div class="AddDoctorDivContainer-Bottom">
+                <button class="Btn_1">Save</button>
+                <button>Cancel</button>
+              </div>
+            </div>
+            
+          </div> 
+        </div>

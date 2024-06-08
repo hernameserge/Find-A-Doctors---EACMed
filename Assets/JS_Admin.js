@@ -207,6 +207,21 @@ $(document).ready(function(){
   $(".BtnAddDoctor").click(function(){
     $('.AddDoctorDiv').css("display","flex");
   });
+
+
+  $(".Close-AddDoctorDiv").click(function(){
+    $('.AddDoctorDivContainer').css("display","flex");
+    $('.AddDoctorDivContainer').addClass("AddDoctorDivContainerClosing");
+    $('.AddDoctorDiv').addClass("AddDoctorDivClosing");
+    const myTimeout = setTimeout(timer2, 900);
+    function timer2() {
+      $('.AddDoctorDiv').css("display","none");
+      $('.AddDoctorDivContainer').removeClass("AddDoctorDivContainerClosing");
+      $('.AddDoctorDiv').removeClass("AddDoctorDivClosing");
+    }
+  });
+
+
 });
 
 

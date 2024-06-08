@@ -28,10 +28,6 @@
   src: url(./Poppins/Poppins-Light.ttf);
 }
 
-
-
-
-
 :root{
   --Color1: #ffffff;
   --Color2: #eeeeee;
@@ -39,18 +35,8 @@
   --Color4: #277540;
   --Color5: #CC1C16;
   --Color6: #318499;
+  --Color6A: #3184997d;
   --Color7: #3184996b;
-
-
-
-  /* --Color3: #000000;
-  --Color4: #000000;
-  --Color5: #AD2424;
-  --Color6: #E0544F;
-  --Color7: #277540;
-  --Color8: #318499;
-  --Color9: #665F42;
-  --Color10: #70987C; */
 
   --BGColor1: #ffffff;
   --BGColor2: #eeeeee;
@@ -65,9 +51,13 @@
 
   --Border1: 1px solid #00000036;
   --Border2: 1px solid #00000026;
+  --Border3: 1px solid #ffffff;
+  --Border4: 1px solid #000000c6;
+  --Border5: 2px solid #000000c6;
   --BorderColor1: #00000036;
 
   --BoxShadow: 0 0 5px #00000046;
+  --BoxShadow1: 0 0 10px #00000050;
 
   --Font1_PoppinsBold: Poppins_Bold;
   --Font2_PoppinsExtraLight: Poppins_ExtraLight;
@@ -75,26 +65,6 @@
   --Font4_PoppinsRegular: Poppins_Regular; 
   --Font5_PoppinsLight: Poppins_Light;
 }
-
-
-/* ::-webkit-scrollbar {
-  width: 10px;
-  height: 0px;
-}
-::-webkit-scrollbar-track {
-  background: #979797; 
-}
-::-webkit-scrollbar-thumb {
-  background: #bdbdbd7a;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #1c1c1c; 
-} */
-
-
-
-
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -112,20 +82,17 @@
 }
 
 
-.Dashboard-Table::-webkit-scrollbar, .Dashboard-Box2-Chart::-webkit-scrollbar {
-  width: 10px;
-  height: 0px;
-}
+
 
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: var(--fontFam1); */
+  font-family: var(--Font4_PoppinsRegular);
   outline: none;
   scroll-behavior: smooth;
-  /* background-color: var(--BGColor1); */
+  text-decoration-color: yellow;
 }
 
 h1, h3 {
@@ -136,6 +103,9 @@ h4, p, h2{
   font-family: var(--Font2_PoppinsExtraLight)
 }
 
+option{
+  padding: 5px;
+}
 
 
 img{
@@ -152,6 +122,8 @@ select{
   border: none;
 }
 
+
+/* INPUT */
 .InputText1{
   border: 1px solid #0000004f;
   border-radius: 4px;
@@ -187,6 +159,7 @@ select{
   /* border: 1px solid #000000ce; */
   border: 1px solid var(--Color6);
 }
+
 .InputText1:hover i{
   color: var(--Color6);
 }
@@ -210,28 +183,96 @@ select{
   padding: 10px 10px;
 }
 
+.InputText3{
+  border: var(--Border2);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 6px;
+}
+
+.InputText3 input{
+  border: none;
+  border-right: var(--Border1);
+}
+.InputText3 i{
+  opacity: .6;
+}
+
+.InputText3 i:hover{
+  opacity: 1;
+  color: var(--Color6);
+}
+
+/* BUTTON */
 button{
-  /* background-color: var(--Color6); */
   padding: 5px 10px;
   border: var(--Border2);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* color: var(--Color1); */
-  /* box-shadow: var(--BoxShadow); */
+  border-radius: 4px;
 }
 button:hover{
-  background-color: var(--Color6);
-  color: var(--Color1);
+  box-shadow: var(--BoxShadow1);
+  border-radius: 5px;
 }
 
 button i{
   color: var(--Color1);
 }
-button:hover i{
+
+.BtnFocus{
+  background-color: var(--Color6);
   color: var(--Color1);
 }
+
+.Btn_1{
+  background-color: var(--Color6);
+  color: var(--Color1);
+  display: flex;
+  gap: 5px;
+  border: var(--Border3);
+  box-shadow: var(--BoxShadow);
+  text-shadow: 0 0 1px black;
+  transition: .4s;
+}
+
+.Btn_1 i{
+  color: var(--Color1);
+}
+
+.Btn_2{
+  background-color: var(--Color3);
+  color: var(--Color1);
+  display: flex;
+  gap: 5px;
+  border: var(--Border3);
+  box-shadow: var(--BoxShadow);
+  text-shadow: 0 0 1px black;
+  transition: .4s;
+}
+
+.Btn_2 i{
+  color: var(--Color1);
+}
+
+.Btn_3{
+  background-color: var(--Color4);
+  color: var(--Color1);
+  display: flex;
+  gap: 5px;
+  border: var(--Border3);
+  box-shadow: var(--BoxShadow);
+  text-shadow: 0 0 1px black;
+  transition: .4s;
+}
+
+.Btn_3 i{
+  color: var(--Color1);
+}
+
 
 .CircleDiv{
   display: flex;
@@ -261,22 +302,14 @@ table{
   width: 100%;
   background-color: var(--AddBackColor1);
 }
-.TbodyTr:hover{
+/* .TbodyTr:hover{
   background-color: var(--Color3);
   color: var(--Color1);
   cursor: pointer;
-}
-tr td{
-  margin-bottom: 1px solid var(--BorderColor1);
-}
-table tr td{
-  text-align: center;
-  font-family: var(--Font4_PoppinsRegular);
-  padding: 5px 0;
-}
-.Img-Table{
+} */
+/* .Img-Table{
   height: 50px;
-}
+} */
 td{
   padding: 2px;
   white-space: nowrap; 
@@ -297,6 +330,14 @@ th, li{
   justify-content: center;
 }
 
+
+.TdCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .fa-solid{
   color: #272727;
 }
@@ -312,11 +353,6 @@ th, li{
 
 
 
-
-/* .BBottom{
-  height: ;
-  padding-top: 10px;
-} */
 
 
 .D1{
