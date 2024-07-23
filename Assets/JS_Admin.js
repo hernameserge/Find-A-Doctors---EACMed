@@ -40,6 +40,10 @@ function BTNArchive(){
   $(".SBFocus5").addClass("Sidebar_Active");
 }
 
+function clearText(){
+  $(".CT1").val("");
+}
+
 
 
 
@@ -153,8 +157,6 @@ $(document).ready(function(){
       $('.AddDoctorDiv').removeClass("AddDoctorDivClosing");
     }
   });
-
-
 });
 
 
@@ -170,6 +172,7 @@ function AddDoctor(){
   $(".Modal-Sidebar").css("display","flex")
   $(".Modal-AddDoctor").css("display","flex")
   $(".Modal-AddDoctor").siblings().css("display","none");
+  $(".Modal-Container").css("display", "flex");
 }
 
 
@@ -251,8 +254,9 @@ function InsertNewDoctor(InsertDoctor){
   var data = {
     InsertDoctor: InsertDoctor,
     LastName: $("#DoctorsLastName").val(),
+    MiddleName: $("#DoctorsMiddleName").val(),
     FirstName: $("#DoctorsFirstName").val(),
-    Gender: $("#DoctorsFirstName").val(),
+    Gender: $("#DoctorGender").val(),
     Specialization: $("#DoctorsFirstName").val(),
     SubSpecialization: $("#DoctorsFirstName").val(),
     Category: $("#DoctorsFirstName").val(),
@@ -275,9 +279,9 @@ function InsertNewDoctor(InsertDoctor){
     data: data,
     success: function(response){
       console.log(response);
-      // $('.doctor_sub_specializationDiv').html(response);
-      // $('.SearchDoctorModal').css("display","none");
-      // $('.TextBoxFilter1').val(SpecsID);
+      $(".tbody-doctor").load(location.href + " .tr-doctor");
+      $(".Modal-Container").css("display", "none");
+      clearText();
     }
   });
 }

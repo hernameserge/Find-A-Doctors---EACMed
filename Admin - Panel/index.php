@@ -334,7 +334,7 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="tbody-doctor">
                     <?php
                     $FetchDoctor = "SELECT DISTINCT * FROM doctor 
                     WHERE doctor_status = 'ACTIVE'
@@ -347,7 +347,7 @@
                       WHERE specialization_doctor_id = 2;
                     ";
                       echo "
-                      <tr>
+                      <tr class='tr-doctor'>
                         <td>".$row['doctor_name']."</td>
                         <td>
                         </td>
@@ -359,117 +359,6 @@
                       </tr>
                     ";};?>
 
-                    
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                      <tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
-                        <td class='TCenter'>78 </td>
-                        <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
-                      </tr>
                   </tbody>
                 </table>
               </div>
@@ -641,25 +530,29 @@
             <div class="Modal-DivDoctor Modal-AddDoctor D1">
               <div class="Modal-Sidebar-Top">
                 <i class="fa-solid fa-user-plus"></i>
-                <h4>Add Doctor</h4>,
+                <h4>Add Doctor</h4>
               </div>
               <div class="Modal-Sidebar-Main">
                 <div class="AddDoctorDivContainer-Form"> 
                   <h4>Doctor</h4>
                   <div class="InputFieldForm">
                     <i>Last Name:</i>
-                    <input type="text" placeholder="Last Name" id="DoctorsLastName">
+                    <input type="text" placeholder="Last Name" class="CT1" id="DoctorsLastName">
+                  </div>
+                  <div class="InputFieldForm">
+                    <i>Middle Name:</i>
+                    <input type="text" placeholder="Middle Name" class="CT1" id="DoctorsMiddleName">
                   </div>
                   <div class="InputFieldForm">
                     <i>First Name:</i>
-                    <input type="text" placeholder="First Name" id="DoctorsFirstName">
+                    <input type="text" placeholder="First Name" class="CT1" id="DoctorsFirstName">
                   </div>
                   <div class="InputFieldForm">
                     <i>Gender:</i>
-                    <select name="" id="">`
+                    <select name="" id="DoctorGender" class="CT1">
                       <option value="" selected disabled>-</option>
-                      <option value="">Male</option>
-                      <option value="">Female</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
                     </select>
                   </div>
                   <br>
@@ -667,7 +560,7 @@
                   <div class="InputFieldForm">
                     <i>Specialization:</i>
                     <div class="Flex">
-                      <input type="text" placeholder="Specialization">
+                      <input type="text" placeholder="Specialization" class="CT1">
                       <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
                     </div>
                   </div>
@@ -680,7 +573,7 @@
                   <div class="InputFieldForm">
                     <i>Sub Specialization:</i>
                     <div class="Flex">
-                      <input type="text" placeholder="Sub Specialization">
+                      <input type="text" placeholder="Sub Specialization " class="CT1">
                       <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
                     </div>
                   </div>
@@ -692,7 +585,7 @@
                   <h4>Category</h4>
                   <div class="InputFieldForm">
                     <i>Category:</i>
-                    <select name="" id="">
+                    <select name="" id="" class="CT1">
                       <option value="" selected disabled>-</option>
                       <option value="">Regular Consultant</option>
                       <option value="">Waiting Consultant</option>
@@ -702,35 +595,35 @@
                   <h4>Primary Secretary</h4>
                   <div class="InputFieldForm">
                     <i>Full Name:</i>
-                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Full Name" class="CT1">
                   </div>
                   <div class="InputFieldForm">
                     <i>Contact Number:</i>
-                    <input type="text" placeholder="09*********">
+                    <input type="text" placeholder="09*********" class="CT1">
                   </div>
                   <div class="InputFieldForm">
                     <i>Network:</i>
-                    <input type="text" placeholder="Ex. Smart, Globe">
+                    <input type="text" placeholder="Ex. Smart, Globe" class="CT1">
                   </div>
                   <br>
                   <h4>Secondary Secretary</h4>
                   <div class="InputFieldForm">
                     <i>Full Name:</i>
-                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Full Name" class="CT1">
                   </div>
                   <div class="InputFieldForm">
                     <i>Contact Number:</i>
-                    <input type="text" placeholder="09*********">
+                    <input type="text" placeholder="09*********" class="CT1">
                   </div>
                   <div class="InputFieldForm">
                     <i>Network:</i>
-                    <input type="text" placeholder="Ex. Smart, Globe">
+                    <input type="text" placeholder="Ex. Smart, Globe" class="CT1">
                   </div>
                   <br>
                   <h4>Schedule</h4>
                   <div class="InputFieldForm">
                     <i>Schedule:</i>
-                    <input type="text" placeholder="Schedule">
+                    <input type="text" placeholder="Schedule" class="CT1">
                   </div>
                   <div class="InputFieldForm">
                     <i></i>
@@ -741,7 +634,7 @@
                   <div class="InputFieldForm">
                     <i>Room:</i>
                     <div class="Flex">
-                      <input type="text" placeholder="Room">
+                      <input type="text" placeholder="Room" class="CT1">
                       <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
                     </div>
                   </div>
@@ -753,13 +646,13 @@
                   <h4>Teleconsultaion</h4>
                   <div class="InputFieldForm">
                     <i>Teleconsultaion:</i>
-                    <input type="text" placeholder="Teleconsultaion">
+                    <input type="text" placeholder="Teleconsultaion" class="CT1">
                   </div>
                   <br>
                   <h4>HMO Accreditation</h4>
                   <div class="InputFieldForm">
                     <i>HMO Accreditation:</i>
-                    <input type="text" placeholder="HMO Accreditation">
+                    <input type="text" placeholder="HMO Accreditation" class="CT1">
                   </div>
                   <div class="InputFieldForm">
                     <i></i>

@@ -70,7 +70,7 @@
           <div class="Main_Div1-Section">
             <?php  while($row = mysqli_fetch_assoc($AllDoctors1)){
               $DID = $row['doctor_id'];
-              $DSex = $row['sex'];
+              $DSex = $row['doctor_sex'];
               if($DSex == "Male"){
                 $DR_SexColor = "ImgBColor1";
               } else{
@@ -80,7 +80,7 @@
                 <div class='Main_Div1-Box1'>
                   <div class='Img ".$DR_SexColor."'><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
                   <div class=''>
-                    <h1>Dr. ".$row['doctor_name']."</h1>
+                    <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
                   
                     ";
                     $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID LIMIT 1";

@@ -1,4 +1,3 @@
-
 body{
   background-image: url("../Assets/Images/EACMed_Bloom\ 1.png");
   background-size: cover;
@@ -7,6 +6,10 @@ body{
 }
 
 .Admin-LoginPage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -67,8 +70,10 @@ body{
   border: 1px solid var(--BorderColor1);
   background-color: var(--BGColor4);
   border: var(--BorderColor1);
-  box-shadow: -2px 5px 25px #00000017;
+  /* box-shadow: -2px 5px 25px #00000017; */
+  box-shadow: -2px 5px 25px #000000df;
   padding: 40px;
+  border: 1px solid #ffffff00;
   color: var(--Color1);
   transition: 0.4s;
   /* animation-name: Admin-LoginPageForm;
@@ -80,7 +85,9 @@ body{
 }
 
 .Admin-LoginPageForm:hover{
-  box-shadow: -2px 5px 25px #000000df;
+  /* box-shadow: -2px 5px 25px #000000df; */
+  border: 1px solid #ffffff9a;
+  box-shadow: -2px 5px 25px #00000053;
 }
 
 .Admin-LoginPageForm button{
@@ -116,3 +123,14 @@ body{
   0%{margin-left: -50px; opacity: 0;};
 }
 
+.Overlay-Background{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #ffffff59; */
+  /* background-color: #ffffff4b; */
+  background-color: #00000082;
+}

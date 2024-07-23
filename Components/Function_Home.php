@@ -17,7 +17,7 @@ if(isset($_POST["DoctorID"])){
 
   while($row = mysqli_fetch_assoc($DoctorDetails)){
     $DID = $row['doctor_id'];
-    $DSex1 = $row['sex'];
+    $DSex1 = $row['doctor_sex'];
     if($DSex1 == "Male"){$DR_SexColor = "ModalContainerProfileBorder1";} else{$DR_SexColor = "ModalContainerProfileBorder2";}
     echo "
       <div class='HomeMain-ModalContainer'>
@@ -26,7 +26,7 @@ if(isset($_POST["DoctorID"])){
             <div class='ModalContainerDiv1Flex'>
               <div class='ModalContainerDiv1Img ".$DR_SexColor." '><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
               <div class='ModalContainerDiv1Names'>
-                <h1>Dr. ".$row['doctor_name']."</h1>
+                <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
                 ";
                 $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID";
                 $DoctorsSpecs1 = mysqli_query($connMysqli,$DoctorsSpecs1);
@@ -209,7 +209,7 @@ if(isset($_POST["SearchDoc"])){
         <div class='Main_Div1-Box1'>
         <div class='Img ".$DR_SexColor."'><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
           <div class=''>
-            <h1>Dr. ".$row['doctor_name']."</h1>
+            <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
             ";
             $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID LIMIT 1";
             $DoctorsSpecs1 = mysqli_query($connMysqli,$DoctorsSpecs1);
@@ -362,7 +362,7 @@ if(isset($_POST["Clear1"])){
       <div class='Main_Div1-Box1'>
       <div class='Img ".$DR_SexColor."'><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
         <div class=''>
-          <h1>Dr. ".$row['doctor_name']."</h1>
+          <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
           ";
           $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID LIMIT 1";
           $DoctorsSpecs1 = mysqli_query($connMysqli,$DoctorsSpecs1);
@@ -475,7 +475,7 @@ if(isset($_POST["BtnDocFill"])){
             <div class='Main_Div1-Box1'>
             <div class='Img ".$DR_SexColor."'><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
               <div class=''>
-                <h1>Dr. ".$row['doctor_name']."</h1>
+                <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
                 ";
                 $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID LIMIT 1";
                 $DoctorsSpecs1 = mysqli_query($connMysqli,$DoctorsSpecs1);
@@ -564,7 +564,7 @@ if(isset($_POST["BtnDocFill"])){
         <div class='Main_Div1-Box1'>
         <div class='Img ".$DR_SexColor."'><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
           <div class=''>
-            <h1>Dr. ".$row['doctor_name']."</h1>
+            <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
             ";
             $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID LIMIT 1";
             $DoctorsSpecs1 = mysqli_query($connMysqli,$DoctorsSpecs1);
@@ -702,7 +702,7 @@ if(isset($_POST["Filter_All"])){
       <div class='Main_Div1-Box1'>
       <div class='Img ".$DR_SexColor."'><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
         <div class=''>
-          <h1>Dr. ".$row['doctor_name']."</h1>
+          <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
           ";
           $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID LIMIT 1";
           $DoctorsSpecs1 = mysqli_query($connMysqli,$DoctorsSpecs1);

@@ -57,6 +57,10 @@
   <title>EACMC - Find Your Doctor</title>
 </head>
 <body>
+  <div class="Overlay-Background">
+
+  </div>
+
   <div class="Admin-LoginPage">
     <div class="Admin-LoginDiv">
       <div class="Admin-LoginLogo">

@@ -42,8 +42,9 @@ if(isset($_POST["page"])){
 if(isset($_POST["InsertDoctor"])){
   global $connMysqli;
   $LastName = $_POST["LastName"]; 
+  $MiddleName = $_POST["MiddleName"]; 
   $FirstName = $_POST["FirstName"]; 
-  $FullName = $LastName . " " . $FirstName;
+  // $FullName = $LastName . " " . $FirstName;
 
   $Gender = $_POST["Gender"]; 
   $Specialization = $_POST["Specialization"]; 
@@ -62,8 +63,16 @@ if(isset($_POST["InsertDoctor"])){
   $TeleConsultation = $_POST["TeleConsultation"];
   $HMOAccreditation = $_POST["HMOAccreditation"]; 
 
-  $InsertDoctor = $connPDO->prepare("INSERT INTO `doctor`(doctor_name) VALUES(?)");
-  $InsertDoctor->execute([$FullName]);
+  if($Gender == "Male"){
+    $Profile_Img = "Doctor1.png";
+  }
+  else{
+    $Profile_Img = "Doctor2.png";
+  }
+
+
+  $InsertDoctor = $connPDO->prepare("INSERT INTO `doctor`(doctor_firstname, doctor_middlename, doctor_lastname, profile_image, doctor_sex) VALUES(?,?,?,?,?)");
+  $InsertDoctor->execute([$FirstName, $MiddleName, $LastName, $Profile_Img, $Gender]);
 }
 
 
