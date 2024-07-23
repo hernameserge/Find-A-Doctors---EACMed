@@ -641,7 +641,7 @@
             <div class="Modal-DivDoctor Modal-AddDoctor D1">
               <div class="Modal-Sidebar-Top">
                 <i class="fa-solid fa-user-plus"></i>
-                <h4>Add Doctor</h4>
+                <h4>Add Doctor</h4>,
               </div>
               <div class="Modal-Sidebar-Main">
                 <div class="AddDoctorDivContainer-Form"> 
