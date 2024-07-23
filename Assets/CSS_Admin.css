@@ -404,9 +404,36 @@
   cursor: pointer;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
-tr:hover {background-color: #ddd;}
-.Tr-Header:hover {background-color: #ffffff;}
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+.Tr-Header:hover {
+  background-color: #ffffff;
+}
+
+.Tr-Header th{
+  text-align: center;
+}
+.td-center{
+  text-align: center
+}
+
+.tr-center td{
+  text-align: ;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+.td-div{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 
 

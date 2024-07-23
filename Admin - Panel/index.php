@@ -326,9 +326,6 @@
                   <thead>
                     <tr class="Tr-Header">
                       <th>Name</th>
-                      <th>Specialization</th>
-                      <th>Secretary</th>
-                      <th>Room</th>
                       <th class="TCenter">Number of HMO/s</th>
                       <th class="TCenter">Status</th>
                       <th>Action</th>
@@ -348,14 +345,10 @@
                     ";
                       echo "
                       <tr class='tr-doctor'>
-                        <td>".$row['doctor_name']."</td>
-                        <td>
-                        </td>
-                        <td>Sophia Marie L. Cruz </td>
-                        <td>2nd Floor - Room 2408 </td>
+                        <td class='capitalize'>".$row['doctor_lastname']." ".$row['doctor_firstname']." ".substr($row['doctor_middlename'], 0, 1).".</td>
                         <td class='TCenter'>78 </td>
                         <td class='TCenter'>Active </td>
-                        <td><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></td>
+                        <td><div class='td-div'><button class='Btn_1' onclick='ViewDoctor()'><i class='fa-regular fa-eye'></i>View</button></div></td>
                       </tr>
                     ";};?>
 
@@ -397,11 +390,11 @@
                     $FetchAdmin = "SELECT * FROM admin";
                     $FetchAdmin = mysqli_query($connMysqli,$FetchAdmin);
                     while($row = mysqli_fetch_assoc($FetchAdmin)){echo "
-                      <tr>
+                      <tr class='tr-center'>
                         <td>".$row['admin_username']."</td>
-                        <td>Super Admin</td>
-                        <td>Active</td>
-                        <td><button class='Btn_1' onclick='ViewAdmin()'><i class='fa-regular fa-eye'></i> View</button></td>
+                        <td class='td-center'>Super Admin</td>
+                        <td class='td-center'>Active</td>
+                        <td><div class='td-div'><button class='Btn_1' onclick='ViewAdmin()'><i class='fa-regular fa-eye'></i> View</button></div></td>
                       </tr>
                     ";};?>   
                   </tbody>
@@ -536,16 +529,16 @@
                 <div class="AddDoctorDivContainer-Form"> 
                   <h4>Doctor</h4>
                   <div class="InputFieldForm">
-                    <i>Last Name:</i>
-                    <input type="text" placeholder="Last Name" class="CT1" id="DoctorsLastName">
+                    <i>First Name:</i>
+                    <input type="text" placeholder="First Name" class="CT1" id="DoctorsFirstName">
                   </div>
                   <div class="InputFieldForm">
                     <i>Middle Name:</i>
                     <input type="text" placeholder="Middle Name" class="CT1" id="DoctorsMiddleName">
                   </div>
                   <div class="InputFieldForm">
-                    <i>First Name:</i>
-                    <input type="text" placeholder="First Name" class="CT1" id="DoctorsFirstName">
+                    <i>Last Name:</i>
+                    <input type="text" placeholder="Last Name" class="CT1" id="DoctorsLastName">
                   </div>
                   <div class="InputFieldForm">
                     <i>Gender:</i>

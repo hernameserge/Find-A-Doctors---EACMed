@@ -198,7 +198,7 @@ if(isset($_POST["SearchDoc"])){
   if($SearchResult->num_rows > 0){
     while($row = mysqli_fetch_assoc($SearchResult)){
       $DID = $row['doctor_id'];
-      $DSex = $row['sex'];
+      $DSex = $row['doctor_sex'];
       if($DSex == "Male"){
         $DR_SexColor = "ImgBColor1";
       } else{
@@ -351,7 +351,7 @@ if(isset($_POST["Clear1"])){
 
   while($row = mysqli_fetch_assoc($SearchResult2)){
     $DID = $row['doctor_id'];
-    $DSex = $row['sex'];
+    $DSex = $row['doctor_sex'];
     if($DSex == "Male"){
       $DR_SexColor = "ImgBColor1";
     } else{
@@ -464,7 +464,7 @@ if(isset($_POST["BtnDocFill"])){
     
         while($row = mysqli_fetch_assoc($SearchResult2)){
           $DID = $row['doctor_id'];
-          $DSex = $row['sex'];
+          $DSex = $row['doctor_sex'];
           if($DSex == "Male"){
             $DR_SexColor = "ImgBColor1";
           } else{
@@ -553,7 +553,7 @@ if(isset($_POST["BtnDocFill"])){
 
     while($row = mysqli_fetch_assoc($SearchResult2)){
       $DID = $row['doctor_id'];
-      $DSex = $row['sex'];
+      $DSex = $row['doctor_sex'];
       if($DSex == "Male"){
         $DR_SexColor = "ImgBColor1";
       } else{
@@ -691,7 +691,7 @@ if(isset($_POST["Filter_All"])){
   $SearchResult5 = mysqli_query($connMysqli, $SearchResult);
   while($row = mysqli_fetch_assoc($SearchResult5)){
     $DID = $row['doctor_id'];
-    $DSex = $row['sex'];
+    $DSex = $row['doctor_sex'];
     if($DSex == "Male"){
       $DR_SexColor = "ImgBColor1";
     } else{
@@ -702,7 +702,7 @@ if(isset($_POST["Filter_All"])){
       <div class='Main_Div1-Box1'>
       <div class='Img ".$DR_SexColor."'><img src='./Uploaded/".$row['profile_image']."' alt=''></div>
         <div class=''>
-          <h1>Dr. ".$row['doctor_lastname'].".  ".substr($row['doctor_middlename'], 0, 1)." ".$row['doctor_firstname']."</h1>
+          <h1>Dr. ".$row['doctor_name']."</h1>
           ";
           $DoctorsSpecs1 = "SELECT * FROM doctor_specialization WHERE specialization_doctor_id = $DID LIMIT 1";
           $DoctorsSpecs1 = mysqli_query($connMysqli,$DoctorsSpecs1);

@@ -180,6 +180,7 @@ function AddDoctor(){
 function ViewDoctor(){
   $(".Modal-Sidebar").css("display","flex")
   $(".Modal-ViewDoctor").css("display","flex")
+  $(".Modal-Container").css("display","flex")
   $(".Modal-ViewDoctor").siblings().css("display","none");
 }
 
