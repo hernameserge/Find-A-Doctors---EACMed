@@ -1,8 +1,4 @@
 
-
-/* font-family: 'Roboto Condensed', sans-serif; */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap'); */
-
 @font-face {
   font-family: Poppins_Bold;
   src: url(./Poppins/Poppins-Bold.ttf);
@@ -37,12 +33,12 @@
   --Color6: #318499;
   --Color6A: #3184997d;
   --Color7: #3184996b;
+  --Color8: #9acd32;
 
   --BGColor1: #ffffff;
   --BGColor2: #eeeeee;
   --BGColor3: #1f1f1f;
   --BGColor4: #013220;
-  
   --BGColor5: #00000036;
 
   --FontColor1: #ffffff;
@@ -54,6 +50,7 @@
   --Border3: 1px solid #ffffff;
   --Border4: 1px solid #000000c6;
   --Border5: 2px solid #000000c6;
+  --Border6: 2px solid var(--Color6);
   --BorderColor1: #00000036;
 
   --BoxShadow: 0 0 5px #00000046;
@@ -81,10 +78,6 @@
   background: #1c1c1ca7; 
 }
 
-
-
-
-
 *{
   margin: 0;
   padding: 0;
@@ -103,10 +96,18 @@ h4, p, h2{
   font-family: var(--Font2_PoppinsExtraLight)
 }
 
+.Text-Trans-Upper{
+  text-transform: uppercase;
+}
+
 option{
   padding: 5px;
 }
 
+.lord-icon{
+  height: 40px;
+  width: 40px;
+}
 
 img{
   height: 100%;
@@ -156,7 +157,6 @@ select{
 }
 
 .InputText1:hover{
-  /* border: 1px solid #000000ce; */
   border: 1px solid var(--Color6);
 }
 
@@ -300,45 +300,61 @@ button i{
 table{
   border-collapse: collapse;
   width: 100%;
-  background-color: var(--AddBackColor1);
+  background-color: var(--BGColor1);
 }
-/* .TbodyTr:hover{
-  background-color: var(--Color3);
-  color: var(--Color1);
-  cursor: pointer;
-} */
-/* .Img-Table{
-  height: 50px;
-} */
-td{
-  padding: 2px;
-  white-space: nowrap; 
-  max-width:  80px; 
-  overflow: hidden;
-  text-overflow: ellipsis; 
-  font-family: var(--Font4_PoppinsRegular);
+
+.TCenter{
+  text-align: center;
+  justify-content: center;
 }
-th, li{
+
+thead{
+  position: sticky;
+  top: 0;
+  background-color: var(--BGColor1);
+  /* box-shadow: 0 0 5px black; */
+  box-shadow: 0 0 0px 3px var(--Color6);
+  padding: 10px;
+}
+
+tbody{
+  overflow: auto;
+  padding: 10px;
+}
+
+th{
+  background-color: var(--BGColor1);
+  text-align: left; 
+  padding: 4px;
+}
+
+li{
   padding: 6px 2px;
   text-wrap: nowrap;
   font-family: var(--Font4_PoppinsRegular);
 }
 
-.TableFlex1{
+td{
+  padding:4px 10px;
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 100px;
+  text-overflow: ellipsis; 
+  font-family: var(--Font4_PoppinsRegular);
+  border-bottom: var(--Border1);
+}
+
+.Table-Div{
   display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
-  justify-content: center;
+  overflow: auto;
+  box-shadow: var(--BoxShadow);
+  border-radius: 10px;
 }
 
-
-.TdCenter{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.fa-solid{
+.Table-Div .fa-solid{
   color: #272727;
 }
 
@@ -351,10 +367,7 @@ th, li{
 }
 
 
-
-
-
-
+/* ANIMATION */
 .D1{
   animation-name: D1;
   animation-duration: 1s;
@@ -362,9 +375,6 @@ th, li{
 @keyframes D1 {
   0%{opacity: 0;}
 }
-
-
-
 
 .SDiv{
   display: none;

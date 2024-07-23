@@ -27,9 +27,6 @@
 
 
 
-.Hide{
-  display: none;
-}
 
 .tooltip {
   position: relative;
@@ -65,46 +62,6 @@
 /* ================================ */
 
 
-
-.Admin-LoginPage{
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.Admin-LoginDiv{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: -100px;
-}
-.Admin-LoginLogo img{
-  height: 90px;
-  margin-bottom: 15px;
-}
-
-.Admin-LoginPageForm{
-  height: 370px;
-  width: 500px;
-  border-radius: 10px;
-  border: 1px solid var(--BorderColor1);
-  background-color: var(--BGColor4);
-  border: var(--BorderColor1);
-  box-shadow: -2px 5px 25px #00000017;
-  padding: 40px;
-  color: var(--Color1);
-}
-
-
-
-
-
-
 /* Admin */
 .AdminDiv{
   height: 100vh;
@@ -128,7 +85,6 @@
 .AdminSidebarDiv1{
   padding: 10px;
   box-shadow: 0 0 2px #00000036;
-  
   border-bottom: 1px solid var(--BorderColor1);
 }
 .AdminSidebarDiv1IMG{
@@ -175,12 +131,37 @@
 }
 
 .AdminSidebarDiv3{
-  padding: 10px;
-  box-shadow: 0 0 2px #00000036;
-  border-top: 1px solid var(--BorderColor1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  min-height: 115px;
+  flex-direction: column;
+  /* padding: 10px; */
 }
-.AdminSidebarDiv3 button{
+
+.AdminSidebarDiv3_Flex{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  /* box-shadow: 0 0 2px #00000036; */
+  border-top: 1px solid var(--BorderColor1);
+  animation-duration: 1.5s;
+  animation-name: AdminSidebarDiv3_Flex;
+}
+@keyframes AdminSidebarDiv3_Flex {
+  0%{transform: translate(0px, 120px);};
+}
+
+
+.AdminSidebarDiv3_Flex button{
   width: 100%;
+  padding: 10px 10px;
+  justify-content: start;
+  gap: 15px;
+}
+.AdminSidebarDiv3_Flex button i{
+  font-size: 20px;
 }
 
 .AdminMain{
@@ -197,6 +178,7 @@
   flex-direction: column;
   background-color: var(--BGColor2);
   overflow: auto;
+  position: relative;
   height: 100%;
 }
 .DoctorsDiv, .AccountsDiv, .ActivityLogs, .ArchivesDiv, .DoctorsViewPanel{
@@ -215,19 +197,33 @@
 }
 
 .AdminDashboard-Profile-Box{
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid var(--BorderColor1);
-  padding: 2px 8px;
+  padding: 5px 8px;
   align-items: center;
+  /* justify-content: center; */
   display: flex;
-  gap: 10px;
+  gap: 5px;
+  box-shadow: var(--BoxShadow);
 }
 
 .AdminDashboard-Profile-Box-Circle{
   height: 30px;
+  /* border-radius: 50%; */
+  /* border: 1px solid var(--BorderColor1); */
+  /* border: 2px solid var(--Color3); */
+  /* border: var(--Border1); */
+  overflow: hidden;
+  background-image: url("../Assets/Images/EACMC_LOGO\ 1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.AdminDashboard-Profile-Box-Circle img{
+  aspect-ratio: 1/1;
+  height: 100%;
   border-radius: 50%;
-  width: 30px;
-  border: 1px solid var(--BorderColor1);
+  border: 2px solid var(--Color3);
 }
 
 .AdminDashboard-Container{
@@ -408,6 +404,9 @@
   cursor: pointer;
 }
 
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+.Tr-Header:hover {background-color: #ffffff;}
 
 
 
@@ -421,6 +420,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+
+  z-index: 100;
   border-bottom: var(--Border1);
 }
 
@@ -440,6 +441,371 @@
 }
 
 
+
+
+/* Modal */
+.Modal-Container{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--BGColor5);
+  display: flex;
+  justify-content: end;
+  animation-name: Modal-Container;
+  animation-duration: 1s;
+  background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,0,0.25253851540616246) 77%);
+}
+@keyframes Modal-Container {
+  0%{opacity: 0; width: 400px; right: -100px; background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.258140756302521) 100%);};
+}
+
+.Modal-Sidebar-Exit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px 0 0 10px;
+  background-color: var(--BGColor1);
+  box-shadow: var(--BoxShadow);
+  cursor: pointer;
+  animation-name: Modal-Sidebar-Exit;
+  animation-duration: 1.5s;
+}
+@keyframes Modal-Sidebar-Exit {
+  0%{margin-right: -50px};
+}
+
+.Modal-Sidebar-Container{
+  box-shadow: var(--BoxShadow);
+  width: 500px;
+  height: 100%;
+  background-color: var(--BGColor1);
+  display: flex;
+  flex-direction: column;
+}
+
+.Modal-DivDoctor{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
+  height: 100%;
+}
+
+.Modal-Sidebar-Top{
+  min-height: 40px;
+  height: 40px;
+  box-shadow: var(--BoxShadow);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 5px;
+  z-index: 100;
+}
+
+.Modal-Sidebar-Main{
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+}
+
+.Modal-Sidebar-Main input{
+  text-transform: capitalize;
+}
+
+.Modal-Sidebar-Bottom{
+  width: 100%;
+  height: 50px;
+  box-shadow: var(--BoxShadow);
+  display: flex;
+  z-index: 100;
+  padding: 5px 10px;
+  gap: 10px;
+}
+
+.Modal-Sidebar-Bottom button{
+  width: 100%;
+}
+
+/* .ModalSidebar-Container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+} */
+
+.Modal-Container .InputFieldForm{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.Modal-Container .InputFieldForm .Flex{
+  width: 100%;
+}
+
+.Modal-Container .InputFieldForm .Flex button{
+  min-width: 60px;
+}
+.Modal-Container .InputFieldForm input,
+.Modal-Container .InputFieldForm select
+{
+  width: 100%;
+  border: var(--Border1);
+}
+
+.Modal-Container .InputFieldForm i{
+  opacity: .6;
+  min-width: 180px;
+}
+
+.InputFieldForm .InformationField{
+  margin-top: 10px;
+  height: 110px;
+  width: 100%;
+  border-radius: 10px;
+  border: var(--Border1);
+}
+
+.Modal-Container .Btn_1 i{
+  min-width: 10px;
+}
+
+.Modal-ViewDoctor{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+
+/* == */
+.Div-Container1{
+  border: var(--Border1);
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.Doctor-Img-Profile{
+  height: 60px;
+}
+
+.Doctor-Active i{
+  color: var(--Color8);
+}
+
+.EditDoctorDivContainer-Form, .AddDoctorDivContainer-Form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.Modal-Sidebar, .Modal-AddDoctor, .Modal-ViewDoctor, .Modal-EditDoctor{
+  display: none;
+}
+
+
+/* PROMPT MESSAGE */
+.Prompt-Message{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: var(--BGColor5);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Prompt-Div{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.Prompt-Message-Div{
+  height: 250px;
+  width: 400px;
+  background-color: var(--BGColor1);
+  border-radius: 10px;
+  border: var(--Border1);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: var(--BoxShadow);
+  animation-name: Prompt-Message-Div;
+  animation-duration: 1s;
+}
+@keyframes Prompt-Message-Div {
+  0%{margin-bottom: -100px; opacity: 0;};
+}
+
+
+.Prompt-Message-Top{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.Prompt-Message-Center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: auto;
+}
+
+.P-Message{
+  margin-top: -40px;
+  text-align: center;
+  max-width: 350px;
+}
+
+.Prompt-Message-Bottom{
+  display: flex;
+  gap: 5px;
+  box-shadow: var(--BoxShadow);
+  padding: 5px 8px;
+}
+
+.Prompt-Message-Bottom button{
+  width: 100%;
+}
+
+
+.PromptAddNewDoctor{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+
+.Hide{
+  display: none;
+}
+
+
+/* Pop Up Div */
+.Pop-Container{
+  position: relative;
+  /* height: 40px; */
+  overflow: hidden;
+}
+
+
+
+.PopUp-Div{
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  background-color: var(--Color3);
+  padding: 3px 8px;
+  border-radius: 8px;
+  box-shadow: var(--BoxShadow);
+  color: white;
+  animation-name: PopUp-Div;
+  animation-duration: .9s;
+}
+
+@keyframes PopUp-Div {
+  0%{transform: translate(50px, 0px);};
+  0%{transform: scale(.9);};
+  0%{
+    position: fixed;
+    top: 0;
+    right: 0;
+  };
+}
+
+
+.PopUp-Div-Add{
+  display: none;
+  animation-name: PopUp-Div-Add;
+  animation-duration: 1s;
+}
+
+@keyframes PopUp-Div-Add {
+  0%{opacity: 0;};
+}
+
+
+
+.PopUp-Div .Lord-Icon{
+  height: 30px;
+  /* display: flex;
+  background-color: yellow; */
+}
+
+
+/* POPUP MESSAGES */
+.PopUp-Message{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  height: 200px;
+  width: 350px;
+  background-color: var(--BGColor1);
+  border-radius: 10px;
+  border: var(--Border1);
+  box-shadow: var(--BoxShadow);
+  z-index: 2000;
+  animation-name: PopUp-Message;
+  animation-duration: 1s;
+}
+@keyframes PopUp-Message {
+  0%{top: 40%; opacity: 0;};
+}
+
+
+.PopUp-Container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Sidebar_Focus i{
+  font-size: 18px;
+  min-width: 30px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* RESPONSIVE */
 @media only screen and (max-width: 600px) {
 
 }

@@ -15,26 +15,28 @@
   <link href = "./Assets/Images/EACMC_LOGO 1.png" rel="icon" type="image/png">
   <link rel="stylesheet" href="./Assets/CSS_Index.css?ver=<?php echo time();?>">
   <link rel="stylesheet" href="./Assets/CSS_Public.css?ver=<?php echo time();?>">
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <title>EACMed - Find Your Doctor</title>
 </head>
 <body>
   <div class="EACMed_Body">
     <!-- BANNER -->
-    <section class="Home_Banner">
-      <div class="Banner_Div">
-        <div class="Banner_Div1">
-          <div class="Banner_Div1Flex">
-            <img src="./Assets/Images/EACMed Logo.png" alt="">
-            <h3 class="HDiv Banner_Div1FlexTitle">EAC Medical Center  - Cavite</h3>
-          </div>
-          <div class="Banner_Div2">
-            <div class="Banner_Div2-Border">
-              <h1>FIND A <span>DOCTOR</span></h1>
+      <section class="Home_Banner">
+        <div class="Banner_Div">
+          <div class="Banner_Div1">
+            <div class="Banner_Div1Flex">
+              <img src="./Assets/Images/EACMed Logo.png" alt="">
+              <h3 class="HDiv Banner_Div1FlexTitle">EAC Medical Center  - Cavite</h3>
+            </div>
+            <div class="Banner_Div2">
+              <div class="Banner_Div2-Border">
+                <h1>FIND A <span>DOCTOR</span></h1>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    <!-- END -->
   
     <!-- MAIN -->
     <section class="Home_Main">
@@ -352,6 +354,7 @@
     <!-- FILTER - MOBILE VIEW -->
     <section class="FilterFloat SDiv">
       <div class="FilterFloatDivContainer0">
+        <p>Filter</p>
         <span class="material-symbols-sharp">filter_list</span>
       </div>
       <div class="FilterFloatDivContainer1">
@@ -360,7 +363,15 @@
             <button class="AllTOdayBtn TodayBtn1 TodayBtnActive" onclick="BtnALlDocFilter('AllDoctor')">All</button>
             <button class="AllTOdayBtn TodayBtn2" onclick="BtnALlDocFilter('TodayDoctor')">Today</button>
           </div>
-          <i class="fa-regular fa-circle-xmark HideFilter"></i>
+          <div class="AllToday-HideBtn HideFilter">
+            <h4>Hide</h4>
+            <lord-icon
+              src="https://cdn.lordicon.com/whtfgdfm.json"
+              trigger="loop"
+              delay="2000"
+              style="width:20px;height:20px">
+            </lord-icon>
+          </div>
         </div>
       </div>
 
@@ -422,6 +433,12 @@
         </div>
       </div>
     </section>
+
+    <!-- START LOGO -->
+    <div class="Welcome-Logo">
+
+    </div>
+    <!-- END -->
   </div>
 
   <script type="text/javascript" src="./Assets/JS_Home.js?ver=<?php echo time();?>"></script>

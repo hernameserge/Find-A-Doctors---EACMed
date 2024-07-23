@@ -337,17 +337,20 @@ svg{
 
 .FilterFloatDivContainer0{
   height: 50px;
-  width: 50px;
+  /* width: 50px; */
   background-color: var(--Color3);
   border: 2px solid var(--Color1);
   box-shadow: 0 0 5px #0000006a;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  border-radius: 10px;
+  padding: 0 10px;
   position: fixed;
   z-index: 10;
   color: var(--Color1);
   bottom: 15px;
   right: 10px;
   display: flex;
+  gap: 5;
   align-items: center;
   justify-content: center;
   animation: move 2s linear infinite;
@@ -677,6 +680,7 @@ svg{
 
 .HomeMain-ModalContainer{
   height: 100%;
+  max-height: 700px;
   width: 700px;
   background-color: var(--BGColor1);
   border-radius: 10px;
@@ -1052,8 +1056,34 @@ svg{
   content: "";
 }
 
+.TotalHMOS{
+  display: none;
+}
 
 
+/* START JULY 19, 2024 */
+/* .Welcome-Logo{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  background-color: #ffffff;
+  animation-name: Welcome-Logo;
+  animation-duration: 4s;
+  opacity: 0;
+} */
+
+
+body{
+  animation-duration: 2s;
+  animation-name: body;
+}
+@keyframes body {
+  0%{};
+}
+
+
+/* END JULY 19, 2024 */
 
 
 @media only screen and (max-width: 600px) {
@@ -1264,6 +1294,24 @@ svg{
   .AllToday i{
     font-size: 22px;
   }
+
+  .AllToday-HideBtn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: var(--Border2);
+    background-color: var(--BGColor1);
+    border-radius: 5px;
+    border: var(--Border1);
+    padding: 4px 10px;
+    color: black;
+  }
+  .AllToday-HideBtn i{
+    font-size: 14px;
+  }
+  
+
+
   .ModalDivCon {
     width: 90%;
     max-height: 400px;
@@ -1272,14 +1320,11 @@ svg{
     max-height: 30px;
   }
 
+  .TotalHMOH{
+    display: none;
+  }
 
+  .TotalHMOS{
+    display: flex;
+  }
 }
-
-/* - Dashboard
-    - Welcome ‘User’!
-    - Demography (Top 5 HMO) — Pie Chart
-    - Demography (Top 5 Specialization) — Pie Chart
-    - Number of doctors
-    - Number of Active and Inactive
-    - Number of Admins
-    - Number of HMOs */

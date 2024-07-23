@@ -6,6 +6,8 @@ $Date = date("Y-m-d");
 $Time = date("h:i:sa");
 $Day = date('l');
 
+
+// VIEW ALL DOCTORS
 if(isset($_POST["DoctorID"])){
   global $connMysqli;
   $DoctorID = $_POST["DoctorID"];
@@ -133,14 +135,16 @@ if(isset($_POST["DoctorID"])){
           <div class='ModalContainer2Div5'>
             <div class='ModalContainer2DivTitle'>
               <div class='ModalContainer3Div1Header'>
-                <h4>HMO Accreditation/s:</h4>
+                <h4 class='TotalHMOH'>HMO Accreditation/s:</h4>
 
 
                 ";
                 $CountDoctorHMO = mysqli_query($connMysqli, "SELECT * FROM doctor_hmo WHERE  hmo_doctor_id = $DID");
                 $CountDoctorHMO = mysqli_num_rows($CountDoctorHMO);
                   echo"
-                <h4>Total HMO/s Accredited: $CountDoctorHMO</h4>
+                <h4 class='TotalHMOH'>Total HMO/s Accredited: $CountDoctorHMO</h4>
+                
+                <h4 class='TotalHMOS'>$CountDoctorHMO HMO Accreditation/s:</h4>
               </div>
               <div class='HMOAccreditationDiv'>
                 ";
@@ -178,6 +182,7 @@ if(isset($_POST["DoctorID"])){
   }
 }
 
+// SEARCH DOCTOR
 if(isset($_POST["SearchDoc"])){
   global $connMysqli;
   $DocID = $_POST["SearchDocID"];
@@ -277,6 +282,7 @@ if(isset($_POST["SearchDoc"])){
   }
 }
 
+// SEARCH SPECIALIZATION
 if(isset($_POST["SearchDocSpecs"])){
   global $connMysqli;
   $SearchDocSpecs = $_POST["SearchDocSpecs"];
@@ -294,6 +300,7 @@ if(isset($_POST["SearchDocSpecs"])){
   }
 }
 
+// SEARCH SUB SPECIALIZATION
 if(isset($_POST["SearchSubSpecs2"])){
   global $connMysqli;
   $SearchSubSpecs2 = $_POST["SearchSubSpecs2"];
@@ -310,6 +317,7 @@ if(isset($_POST["SearchSubSpecs2"])){
   }
 }
 
+// SEARCH HMO
 if(isset($_POST["SearchHMO"])){
   global $connMysqli;
   $SearchHMO = $_POST["SearchHMO"];
@@ -333,6 +341,7 @@ if(isset($_POST["SearchHMO"])){
   }
 }
 
+// RESET FILTER
 if(isset($_POST["Clear1"])){
   global $connMysqli;
 
@@ -421,6 +430,7 @@ if(isset($_POST["Clear1"])){
   ";}
 }
 
+// SELECT SPECS ID
 if(isset($_POST["SelectSpecsID"])){
   global $connMysqli;
   $SelectSpecsID = $_POST["SelectSpecsID"];
@@ -435,6 +445,7 @@ if(isset($_POST["SelectSpecsID"])){
   ";}
 }
 
+// FILTER DOCTOR / TODAY AND ALL
 if(isset($_POST["BtnDocFill"])){
   global $connMysqli;
 
@@ -622,6 +633,7 @@ if(isset($_POST["BtnDocFill"])){
   }
 }
 
+// FILTER ALL DOCTOR
 if(isset($_POST["Filter_All"])){
   global $connMysqli;
   $Text1Fill = $_POST["Text1Fill"]; 
@@ -640,35 +652,12 @@ if(isset($_POST["Filter_All"])){
 
   if($Text4Fill == ""){$A4 = "OR"; }
   else{$A4 = "AND";}
+  
+  if($A6 == "OR"){$Result = "$A4 hmo_id_2 IN ('$HMO')$A6 doctor_schedule_day IN ('$Days')";}
+  else{$Result = "$A6 doctor_schedule_day IN ('$Days')$A4 hmo_id_2 IN ('$HMO')";}
 
-
-  if($A6 == "OR"){
-    $Result = "
-      $A4 hmo_id_2 IN ('$HMO')
-      $A6 doctor_schedule_day IN ('$Days')
-    ";
-  }
-  else{
-    $Result = "
-      $A6 doctor_schedule_day IN ('$Days')
-      $A4 hmo_id_2 IN ('$HMO')
-    ";
-  }
-
-  if($A4 == "OR"){
-    $Result = "
-      $A6 doctor_schedule_day IN ('$Days')
-      $A4 hmo_id_2 IN ('$HMO')
-    ";
-  }
-  else{
-    $Result = "
-      $A4 hmo_id_2 IN ('$HMO')
-      $A6 doctor_schedule_day IN ('$Days')
-    ";
-  }
-
-
+  if($A4 == "OR"){ $Result = " $A6 doctor_schedule_day IN ('$Days') $A4 hmo_id_2 IN ('$HMO')";}
+  else{ $Result = " $A4 hmo_id_2 IN ('$HMO') $A6 doctor_schedule_day IN ('$Days')";}
 
 
   if($Text5Fill != ""){
@@ -780,4 +769,22 @@ if(isset($_POST["Filter_All"])){
     </div>
   ";}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>

@@ -117,7 +117,6 @@ $(document).ready(function(){
 
 
 // FUNCTION ===============
-
 function functionHMO(functionHMOId){
   if($(".HMO_ID_" + functionHMOId).find(".fa-square").length > 0){
     $(".HMO_ID_" + functionHMOId).find(".HMOOName").prop("checked", true);
@@ -133,6 +132,7 @@ function functionHMO(functionHMOId){
     $(".HMO_ID_" + functionHMOId).find(".fa-regular").addClass("fa-square");
     $(".HMO_ID_" + functionHMOId).css({"background-color": "white", "color": "black", "font-weight": "400"});
   }
+  
 
     itemsArray2 = [];
     $(".HMOOName:checked").each(function() {
@@ -554,9 +554,6 @@ function FilterALl(FilterAll){
     data: data,
     success: function(response){
       $('.Main_Div1-Section').html(response);
-      // window.location.href = 'https://example.com';
-      // console.log(response);
-      // window.location.href = './Admin - Panel';
     }
   });
 }
