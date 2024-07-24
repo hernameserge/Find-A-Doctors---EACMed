@@ -859,144 +859,39 @@
               </div>
             </div>
 
+            <!-- Telle Index Start -->
 
             <!-- Add Admin -->
             <div class="Modal-DivDoctor Modal-AddAdmin D1">
               <div class="Modal-Sidebar-Top">
                 <i class="fa-solid fa-user-plus"></i>
-                <h4>Add Admin</h4>
+                <h4>Add Access Account</h4>
               </div>
-              <div class="Modal-Sidebar-Main">
+              <div class="Modal-Sidebar-Main Modal-Not-Capitalize">
                 <div class="AddDoctorDivContainer-Form"> 
-                  <h4>Doctor</h4>
+                  <!-- <h4>Username</h4> -->
                   <div class="InputFieldForm">
-                    <i>Last Name:</i>
-                    <input type="text" placeholder="Last Name">
+                    <i>Username</i>
+                    <input type="text" placeholder="Username" id="AccessUsername">
                   </div>
                   <div class="InputFieldForm">
-                    <i>First Name:</i>
-                    <input type="text" placeholder="First Name">
-                  </div>
-                  <div class="InputFieldForm">
-                    <i>Gender:</i>
-                    <select name="" id="">
+                    <i>Access</i>
+                    <select name="" id="AccessType">
                       <option value="" selected disabled>-</option>
-                      <option value="">Male</option>
-                      <option value="">Female</option>
+                      <option value="Admin">Admin</option>
+                      <option value="Super Admin">Super Admin</option>
                     </select>
-                  </div>
-                  <br>
-                  <h4>Specialization</h4>
-                  <div class="InputFieldForm">
-                    <i>Specialization:</i>
-                    <div class="Flex">
-                      <input type="text" placeholder="Specialization">
-                      <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                  </div>
-                  <div class="InputFieldForm">
-                    <i></i>
-                    <div class="InformationField"></div>
-                  </div>
-                  <br>
-                  <h4>Sub Specialization</h4>
-                  <div class="InputFieldForm">
-                    <i>Sub Specialization:</i>
-                    <div class="Flex">
-                      <input type="text" placeholder="Sub Specialization">
-                      <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                  </div>
-                  <div class="InputFieldForm">
-                    <i></i>
-                    <div class="InformationField"></div>
-                  </div>
-                  <br>
-                  <h4>Category</h4>
-                  <div class="InputFieldForm">
-                    <i>Category:</i>
-                    <select name="" id="">
-                      <option value="" selected disabled>-</option>
-                      <option value="">Regular Consultant</option>
-                      <option value="">Waiting Consultant</option>
-                    </select>
-                  </div>
-                  <br>
-                  <h4>Primary Secretary</h4>
-                  <div class="InputFieldForm">
-                    <i>Full Name:</i>
-                    <input type="text" placeholder="Full Name">
-                  </div>
-                  <div class="InputFieldForm">
-                    <i>Contact Number:</i>
-                    <input type="text" placeholder="09*********">
-                  </div>
-                  <div class="InputFieldForm">
-                    <i>Network:</i>
-                    <input type="text" placeholder="Ex. Smart, Globe">
-                  </div>
-                  <br>
-                  <h4>Secondary Secretary</h4>
-                  <div class="InputFieldForm">
-                    <i>Full Name:</i>
-                    <input type="text" placeholder="Full Name">
-                  </div>
-                  <div class="InputFieldForm">
-                    <i>Contact Number:</i>
-                    <input type="text" placeholder="09*********">
-                  </div>
-                  <div class="InputFieldForm">
-                    <i>Network:</i>
-                    <input type="text" placeholder="Ex. Smart, Globe">
-                  </div>
-                  <br>
-                  <h4>Schedule</h4>
-                  <div class="InputFieldForm">
-                    <i>Schedule:</i>
-                    <input type="text" placeholder="Schedule">
-                  </div>
-                  <div class="InputFieldForm">
-                    <i></i>
-                    <div class="InformationField"></div>
-                  </div>
-                  <br>
-                  <h4>Room</h4>
-                  <div class="InputFieldForm">
-                    <i>Room:</i>
-                    <div class="Flex">
-                      <input type="text" placeholder="Room">
-                      <button class="Btn_1"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                  </div>
-                  <div class="InputFieldForm">
-                    <i></i>
-                    <div class="InformationField"></div>
-                  </div>
-                  <br>
-                  <h4>Teleconsultaion</h4>
-                  <div class="InputFieldForm">
-                    <i>Teleconsultaion:</i>
-                    <input type="text" placeholder="Teleconsultaion">
-                  </div>
-                  <br>
-                  <h4>HMO Accreditation</h4>
-                  <div class="InputFieldForm">
-                    <i>HMO Accreditation:</i>
-                    <input type="text" placeholder="HMO Accreditation">
-                  </div>
-                  <div class="InputFieldForm">
-                    <i></i>
-                    <div class="InformationField"></div>
                   </div>
                 </div>
               </div>
               <div class="Modal-Sidebar-Bottom">
-                <button class="Btn_1" onclick="AddNewDoctor()">Add</button>
+                <button class="Btn_1" onclick="AddNewAccess()">Add</button>
                 <button class="Btn_2" onclick="ModalSidebarExit()">Cancel</button>
               </div>
             </div>
 
-            
+          <!-- Telle Index End -->
+
           </div>
         </div>
       </section>
@@ -1051,6 +946,26 @@
             </div>
           </div>
         </div>
+
+      
+        <!-- Telle Start - Prompt -->
+
+          <!-- Add Access Account -->
+          <div class="Prompt-Div Prompt-AccessAccount Hide">
+            <div class="Prompt-Message-Top">
+              <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="loop"delay="1500" class="lord-icon"></lord-icon>
+              <h4>Are you sure?</h4>
+            </div>
+            <div class="Prompt-Message-Center">
+              <p class="P-Message">Are you sure you want to add an access account?</p>
+            </div>
+            <div class="Prompt-Message-Bottom">
+              <button class="Btn_1" onclick="Yes_AddNewAccess('Access')">Yes</button>
+              <button class="Btn_2" onclick="HidePromptMessage()">No</button>
+            </div>
+          </div>
+
+        <!-- Telle End - Prompt -->
       </section>
     <!-- END -->
 

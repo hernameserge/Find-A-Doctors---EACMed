@@ -225,6 +225,17 @@ function DeleteDoctor(){
   $(".Prompt-RemoveDoctor").siblings().css("display","none");
 }
 
+//Telle JS Start
+
+// PROMPT MESSAGE / ADD ACCESS ACCOUNT
+function AddNewAccess() {
+  $(".Prompt-Message").css("display", "flex");
+  $(".Prompt-AccessAccount").css("display", "flex");
+  $(".Prompt-AccessAccount").siblings().css("display", "none");
+}
+
+//Telle JS End
+
 
 
 // ACCOUNT ==================================
