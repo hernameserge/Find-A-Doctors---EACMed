@@ -1,4 +1,5 @@
-.Dashboard-Table::-webkit-scrollbar, .Dashboard-Box2-Chart::-webkit-scrollbar {
+.Dashboard-Table::-webkit-scrollbar,
+.Dashboard-Box2-Chart::-webkit-scrollbar {
   width: 8px;
   height: 0px;
 }
@@ -9,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #97979700; 
+  background: #97979700;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--Color6A);
@@ -21,18 +22,11 @@
   background: var(--Color6);
 }
 
-
-
-
-
-
-
-
 .tooltip {
   position: relative;
 }
 
-.Btn_1{
+.Btn_1 {
   border-radius: 4px;
 }
 
@@ -57,13 +51,10 @@
   opacity: 1;
 }
 
-
-
 /* ================================ */
 
-
 /* Admin */
-.AdminDiv{
+.AdminDiv {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -71,8 +62,7 @@
   /* overflow: hidden; */
 }
 
-
-.AdminSidebar{
+.AdminSidebar {
   min-width: 250px;
   max-width: 250px;
   grid-area: ASB;
@@ -82,29 +72,29 @@
   height: 100%;
 }
 
-.AdminSidebarDiv1{
+.AdminSidebarDiv1 {
   padding: 10px;
   box-shadow: 0 0 2px #00000036;
   border-bottom: 1px solid var(--BorderColor1);
 }
-.AdminSidebarDiv1IMG{
+.AdminSidebarDiv1IMG {
   width: 100%;
 }
-.AdminSidebarDiv1IMG img{
+.AdminSidebarDiv1IMG img {
   width: 100%;
 }
 
-.AdminSidebarDiv2{
+.AdminSidebarDiv2 {
   height: 100%;
   padding: 10px;
   overflow: auto;
 }
-.AdminSidebarDiv2 ul{
+.AdminSidebarDiv2 ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.AdminSidebarDiv2 ul li{
+.AdminSidebarDiv2 ul li {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -112,25 +102,24 @@
   cursor: pointer;
   border-radius: 5px;
 }
-.AdminSidebarDiv2 ul li svg{
+.AdminSidebarDiv2 ul li svg {
   height: 35px;
 }
-.AdminSidebarDiv2 ul li:hover{
+.AdminSidebarDiv2 ul li:hover {
   background-color: var(--Color3);
   color: var(--Color1);
   fill: white;
   padding-left: 10px;
 }
 
-
-.Sidebar_Active{
+.Sidebar_Active {
   background-color: var(--Color4);
   color: var(--Color1);
   fill: white;
   padding-left: 10px;
 }
 
-.AdminSidebarDiv3{
+.AdminSidebarDiv3 {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -139,7 +128,7 @@
   /* padding: 10px; */
 }
 
-.AdminSidebarDiv3_Flex{
+.AdminSidebarDiv3_Flex {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -150,21 +139,22 @@
   animation-name: AdminSidebarDiv3_Flex;
 }
 @keyframes AdminSidebarDiv3_Flex {
-  0%{transform: translate(0px, 120px);};
+  0% {
+    transform: translate(0px, 120px);
+  }
 }
 
-
-.AdminSidebarDiv3_Flex button{
+.AdminSidebarDiv3_Flex button {
   width: 100%;
   padding: 10px 10px;
   justify-content: start;
   gap: 15px;
 }
-.AdminSidebarDiv3_Flex button i{
+.AdminSidebarDiv3_Flex button i {
   font-size: 20px;
 }
 
-.AdminMain{
+.AdminMain {
   width: 100%;
   background-color: var(--BGColor2);
   display: flex;
@@ -172,8 +162,7 @@
   overflow: auto;
 }
 
-
-.AdminMainDiv{
+.AdminMainDiv {
   display: flex;
   flex-direction: column;
   background-color: var(--BGColor2);
@@ -181,11 +170,15 @@
   position: relative;
   height: 100%;
 }
-.DoctorsDiv, .AccountsDiv, .ActivityLogs, .ArchivesDiv, .DoctorsViewPanel{
+.DoctorsDiv,
+.AccountsDiv,
+.ActivityLogs,
+.ArchivesDiv,
+.DoctorsViewPanel {
   display: none;
 }
 
-.AdminDashboard-Header{
+.AdminDashboard-Header {
   height: 50px;
   width: 100%;
   align-items: center;
@@ -196,7 +189,7 @@
   border-bottom: 1px solid var(--BorderColor1);
 }
 
-.AdminDashboard-Profile-Box{
+.AdminDashboard-Profile-Box {
   border-radius: 5px;
   border: 1px solid var(--BorderColor1);
   padding: 5px 8px;
@@ -207,7 +200,7 @@
   box-shadow: var(--BoxShadow);
 }
 
-.AdminDashboard-Profile-Box-Circle{
+.AdminDashboard-Profile-Box-Circle {
   height: 30px;
   /* border-radius: 50%; */
   /* border: 1px solid var(--BorderColor1); */
@@ -219,28 +212,28 @@
   background-position: center;
 }
 
-.AdminDashboard-Profile-Box-Circle img{
+.AdminDashboard-Profile-Box-Circle img {
   aspect-ratio: 1/1;
   height: 100%;
   border-radius: 50%;
   border: 2px solid var(--Color3);
 }
 
-.AdminDashboard-Container{
+.AdminDashboard-Container {
   height: 93%;
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
 
-.AdminDashboard-Panel{
+.AdminDashboard-Panel {
   display: flex;
   width: 100%;
   gap: 10px;
   height: 100%;
 }
 
-.AdminDashboard-Panel-Div{
+.AdminDashboard-Panel-Div {
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -249,15 +242,15 @@
   height: 100%;
 }
 
-.Dashboard-Box1-Ch{
+.Dashboard-Box1-Ch {
   height: fit-content;
   gap: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   padding: 5px;
 }
 
-.Dashboard-Box-Total{
+.Dashboard-Box-Total {
   line-height: 25px;
   width: 100%;
   padding: 10px;
@@ -270,30 +263,29 @@
   transition: 0.4s;
   cursor: pointer;
 }
-.Dashboard-Box-Total:hover{
+.Dashboard-Box-Total:hover {
   scale: 115%;
   z-index: 1000;
 }
-.Dashboard-Box-Total:hover i{
+.Dashboard-Box-Total:hover i {
   color: var(--Color4);
 }
-.Dashboard-Box-Total p{
+.Dashboard-Box-Total p {
   font-size: 12px;
   text-wrap: nowrap;
   margin-top: -5px;
 }
-.Dashboard-Box-Total h2{
+.Dashboard-Box-Total h2 {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.Dashboard-Box-Total h2 i{
+.Dashboard-Box-Total h2 i {
   font-size: 20px;
   color: var(--Color3);
 }
 
-
-.Dashboard-Box2-Ch{
+.Dashboard-Box2-Ch {
   background-color: var(--BGColor1);
   border: 1px solid var(--BorderColor1);
   display: flex;
@@ -301,19 +293,19 @@
   overflow: auto;
 }
 
-.Dashboard-Box2-Header{
+.Dashboard-Box2-Header {
   background-color: var(--BGColor1);
   padding: 5px 10px;
   display: flex;
   border-bottom: 1px solid var(--BorderColor1);
 }
 
-.Dashboard-Box2-Chart{
+.Dashboard-Box2-Chart {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow: auto  ;
+  overflow: auto;
   padding: 5px 10px;
 }
 
@@ -322,12 +314,12 @@
   min-height: 200px;
 }
 
-#chart2{
+#chart2 {
   width: 100%;
   min-height: 200px;
 }
 
-.AdminDashboard-Box2{
+.AdminDashboard-Box2 {
   max-width: 300px;
   height: 100%;
   padding: 10px;
@@ -337,7 +329,7 @@
   background-color: var(--BGColor1);
 }
 
-.Dashboard-Table{
+.Dashboard-Table {
   height: 100%;
   width: 100%;
   background-color: var(--BGColor1);
@@ -349,47 +341,47 @@
   flex-direction: column;
 }
 
-.Dashboard-Table table{
+.Dashboard-Table table {
   display: flex;
   flex-direction: column;
   width: 100%;
   overflow: auto;
 }
 
-.Dashboard-Table table tr td{
+.Dashboard-Table table tr td {
   font-size: 12px;
   width: 100%;
   text-align: left;
   padding: 5px 10px;
   border-top: 1px solid var(--BorderColor1);
 }
-.Dashboard-Table table tr{
+.Dashboard-Table table tr {
   transition: 0.1s;
   cursor: pointer;
 }
-.Dashboard-Table table tr:hover{
+.Dashboard-Table table tr:hover {
   background-color: var(--Color4);
   color: var(--Color1);
 }
 
-.Dashboard-Table1{
+.Dashboard-Table1 {
   height: 200px;
   overflow: auto;
 }
 
-.Dashboard-Table1{
+.Dashboard-Table1 {
   min-height: 200px;
 }
-.Dashboard-Table2{
+.Dashboard-Table2 {
   height: 300px;
   overflow: auto;
 }
 
-.Dashboard-Table2{
+.Dashboard-Table2 {
   height: 100%;
 }
 
-.Dashboard-Table-Header{
+.Dashboard-Table-Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -397,14 +389,14 @@
   top: 0;
   background-color: var(--BGColor1);
   box-shadow: 0 2px 4px #00000036;
-  padding:  0 5px;
+  padding: 0 5px;
 }
-.Dashboard-Table-Header p{
+.Dashboard-Table-Header p {
   font-size: 12px;
   cursor: pointer;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 tr:hover {
@@ -414,32 +406,29 @@ tr:hover {
   background-color: #ffffff;
 }
 
-.Tr-Header th{
+.Tr-Header th {
   text-align: center;
 }
-.td-center{
-  text-align: center
-}
-
-.tr-center td{
+.td-center {
   text-align: center;
 }
 
-.capitalize{
+.tr-center td {
+  text-align: center;
+}
+
+.capitalize {
   text-transform: capitalize;
 }
 
-.td-div{
+.td-div {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-
-
-
 /* ======== */
-.MainDiv-Header{
+.MainDiv-Header {
   width: 100%;
   height: 50px;
   background-color: var(--Color1);
@@ -452,13 +441,13 @@ tr:hover {
   border-bottom: var(--Border1);
 }
 
-.MainDiv-Header-Right{
+.MainDiv-Header-Right {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.MainDiv-Main{
+.MainDiv-Main {
   height: 100%;
   width: 100%;
   display: flex;
@@ -467,11 +456,8 @@ tr:hover {
   padding: 10px;
 }
 
-
-
-
 /* Modal */
-.Modal-Container{
+.Modal-Container {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -483,14 +469,19 @@ tr:hover {
   justify-content: end;
   animation-name: Modal-Container;
   animation-duration: 1s;
-  background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,0,0.25253851540616246) 77%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.14329481792717091) 0%, rgba(0, 0, 0, 0.25253851540616246) 77%);
 }
 @keyframes Modal-Container {
-  0%{opacity: 0; width: 400px; right: -100px; background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.258140756302521) 100%);};
+  0% {
+    opacity: 0;
+    width: 400px;
+    right: -100px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.258140756302521) 100%);
+  }
 }
 
-.Modal-Sidebar-Exit{
+.Modal-Sidebar-Exit {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -504,10 +495,12 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   animation-duration: 1.5s;
 }
 @keyframes Modal-Sidebar-Exit {
-  0%{margin-right: -50px};
+  0% {
+    margin-right: -50px;
+  }
 }
 
-.Modal-Sidebar-Container{
+.Modal-Sidebar-Container {
   box-shadow: var(--BoxShadow);
   width: 500px;
   height: 100%;
@@ -516,7 +509,7 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   flex-direction: column;
 }
 
-.Modal-DivDoctor{
+.Modal-DivDoctor {
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -524,7 +517,7 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   height: 100%;
 }
 
-.Modal-Sidebar-Top{
+.Modal-Sidebar-Top {
   min-height: 40px;
   height: 40px;
   box-shadow: var(--BoxShadow);
@@ -535,17 +528,17 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   z-index: 100;
 }
 
-.Modal-Sidebar-Main{
+.Modal-Sidebar-Main {
   height: 100%;
   overflow: auto;
   padding: 10px;
 }
 
-.Modal-Sidebar-Main input{
+.Modal-Sidebar-Main input {
   text-transform: capitalize;
 }
 
-.Modal-Sidebar-Bottom{
+.Modal-Sidebar-Bottom {
   width: 100%;
   height: 50px;
   box-shadow: var(--BoxShadow);
@@ -555,7 +548,7 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   gap: 10px;
 }
 
-.Modal-Sidebar-Bottom button{
+.Modal-Sidebar-Bottom button {
   width: 100%;
 }
 
@@ -565,32 +558,31 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   gap: 5px;
 } */
 
-.Modal-Container .InputFieldForm{
+.Modal-Container .InputFieldForm {
   display: flex;
   gap: 10px;
   justify-content: space-between;
 }
 
-.Modal-Container .InputFieldForm .Flex{
+.Modal-Container .InputFieldForm .Flex {
   width: 100%;
 }
 
-.Modal-Container .InputFieldForm .Flex button{
+.Modal-Container .InputFieldForm .Flex button {
   min-width: 60px;
 }
 .Modal-Container .InputFieldForm input,
-.Modal-Container .InputFieldForm select
-{
+.Modal-Container .InputFieldForm select {
   width: 100%;
   border: var(--Border1);
 }
 
-.Modal-Container .InputFieldForm i{
-  opacity: .6;
+.Modal-Container .InputFieldForm i {
+  opacity: 0.6;
   min-width: 180px;
 }
 
-.InputFieldForm .InformationField{
+.InputFieldForm .InformationField {
   margin-top: 10px;
   height: 110px;
   width: 100%;
@@ -598,47 +590,48 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   border: var(--Border1);
 }
 
-.Modal-Container .Btn_1 i{
+.Modal-Container .Btn_1 i {
   min-width: 10px;
 }
 
-.Modal-ViewDoctor{
+.Modal-ViewDoctor {
   display: flex;
   flex-direction: column;
   overflow: auto;
 }
 
-
 /* == */
-.Div-Container1{
+.Div-Container1 {
   border: var(--Border1);
   padding: 5px;
   display: flex;
   gap: 10px;
 }
 
-.Doctor-Img-Profile{
+.Doctor-Img-Profile {
   height: 60px;
 }
 
-.Doctor-Active i{
+.Doctor-Active i {
   color: var(--Color8);
 }
 
-.EditDoctorDivContainer-Form, .AddDoctorDivContainer-Form{
+.EditDoctorDivContainer-Form,
+.AddDoctorDivContainer-Form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-
-.Modal-Sidebar, .Modal-AddDoctor, .Modal-ViewDoctor, .Modal-EditDoctor{
+.Modal-Sidebar,
+.Modal-AddDoctor,
+.Modal-ViewDoctor,
+.Modal-EditDoctor {
   display: none;
 }
 
-
 /* PROMPT MESSAGE */
-.Prompt-Message{
+.Prompt-Message {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -652,14 +645,14 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   justify-content: center;
 }
 
-.Prompt-Div{
+.Prompt-Div {
   display: flex;
   height: 100%;
   flex-direction: column;
   overflow: auto;
 }
 
-.Prompt-Message-Div{
+.Prompt-Message-Div {
   height: 250px;
   width: 400px;
   background-color: var(--BGColor1);
@@ -673,18 +666,20 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   animation-duration: 1s;
 }
 @keyframes Prompt-Message-Div {
-  0%{margin-bottom: -100px; opacity: 0;};
+  0% {
+    margin-bottom: -100px;
+    opacity: 0;
+  }
 }
 
-
-.Prompt-Message-Top{
+.Prompt-Message-Top {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
 }
 
-.Prompt-Message-Center{
+.Prompt-Message-Center {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -693,91 +688,88 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   overflow: auto;
 }
 
-.P-Message{
+.P-Message {
   margin-top: -40px;
   text-align: center;
   max-width: 350px;
 }
 
-.Prompt-Message-Bottom{
+.Prompt-Message-Bottom {
   display: flex;
   gap: 5px;
   box-shadow: var(--BoxShadow);
   padding: 5px 8px;
 }
 
-.Prompt-Message-Bottom button{
+.Prompt-Message-Bottom button {
   width: 100%;
 }
 
-
-.PromptAddNewDoctor{
+.PromptAddNewDoctor {
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: auto;
 }
 
-
-.Hide{
+.Hide {
   display: none;
 }
 
-
 /* Pop Up Div */
-.Pop-Container{
+.Pop-Container {
   position: relative;
   /* height: 40px; */
   overflow: hidden;
 }
 
-
-
-.PopUp-Div{
+.PopUp-Div {
   display: flex;
   align-items: center;
-  gap: 5px; 
+  gap: 5px;
   background-color: var(--Color3);
   padding: 3px 8px;
   border-radius: 8px;
   box-shadow: var(--BoxShadow);
   color: white;
   animation-name: PopUp-Div;
-  animation-duration: .9s;
+  animation-duration: 0.9s;
 }
 
 @keyframes PopUp-Div {
-  0%{transform: translate(50px, 0px);};
-  0%{transform: scale(.9);};
-  0%{
+  0% {
+    transform: translate(50px, 0px);
+  }
+  0% {
+    transform: scale(0.9);
+  }
+  0% {
     position: fixed;
     top: 0;
     right: 0;
-  };
+  }
 }
 
-
-.PopUp-Div-Add{
+.PopUp-Div-Add {
   display: none;
   animation-name: PopUp-Div-Add;
   animation-duration: 1s;
 }
 
 @keyframes PopUp-Div-Add {
-  0%{opacity: 0;};
+  0% {
+    opacity: 0;
+  }
 }
 
-
-
-.PopUp-Div .Lord-Icon{
+.PopUp-Div .Lord-Icon {
   height: 30px;
   /* display: flex;
   background-color: yellow; */
 }
 
-
 /* POPUP MESSAGES */
-.PopUp-Message{
+.PopUp-Message {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -795,11 +787,13 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   animation-duration: 1s;
 }
 @keyframes PopUp-Message {
-  0%{top: 40%; opacity: 0;};
+  0% {
+    top: 40%;
+    opacity: 0;
+  }
 }
 
-
-.PopUp-Container{
+.PopUp-Container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -809,30 +803,29 @@ background: linear-gradient(90deg, rgba(0,0,0,0.14329481792717091) 0%, rgba(0,0,
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.Sidebar_Focus i{
+.Sidebar_Focus i {
   font-size: 18px;
   min-width: 30px;
   text-align: center;
 }
 
+/* Telle CSS Start */
 
+.Modal-Not-Capitalize input {
+  text-transform: none;
+}
 
+.Doctor-Capitalize span {
+  text-transform: capitalize;
+}
 
+.InputFieldForm .InputFieldForm-Info {
+  width: 100%;
+  /* margin-top: 10px; */
+}
 
-
+/* Telle CSS End */
 
 /* RESPONSIVE */
 @media only screen and (max-width: 600px) {
-
 }
