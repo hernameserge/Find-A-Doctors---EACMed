@@ -684,7 +684,7 @@ if(isset($_POST["Filter_All"])){
   WHERE 
         doctor_specialization_name LIKE '%$Text1Fill%'
         AND doctor_sub_specialization_name LIKE '%$Text2Fill%'
-        AND sex LIKE '$Text3Fill%'
+        AND doctor_sex LIKE '$Text3Fill%'
         $TelResult2
         $Result
         ";  
