@@ -75,6 +75,22 @@ if(isset($_POST["InsertDoctor"])){
   $InsertDoctor->execute([$FirstName, $MiddleName, $LastName, $Profile_Img, $Gender]);
 }
 
+// Telle Function_Admin Start
+
+if(isset($_POST["AccessAccount"])) {
+  global $connMysqli;
+
+  $AccessUsername = $_POST["AccessUsername"]; 
+  $AccessType = $_POST["AccessType"]; 
+  $DefaultAccess = '$2y$10$TX6XGGHg9b5BrZuHA6bJCOa9scgvdYtv1CUc1S1oQIcVPPES5SpyW';
+  $AccountStatus = 'NEW';
+  $DefaultStatus = 'ACTIVE';
+
+  $InsertDoctor = $connPDO->prepare("INSERT INTO `admin`(admin_username, admin_password, admin_account_status, admin_status, account_access) VALUES(?, ?, ?, ?, ?)");
+  $InsertDoctor->execute([$AccessUsername, $DefaultAccess, $AccountStatus, $DefaultStatus, $AccessType]);
+}
+
+// Telle Function_Admin Ends
 
 
 

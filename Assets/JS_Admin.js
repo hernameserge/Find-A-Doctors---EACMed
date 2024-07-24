@@ -1,6 +1,6 @@
 function LinkToLogout(){
   location.href = "../Admin - Panel/Logout.php";
-  console.log("Logout");
+  console.log("Logout successfully!");
 }
 
 function BTNDashboard(){
@@ -224,6 +224,17 @@ function DeleteDoctor(){
   $(".Prompt-RemoveDoctor").css("display","flex")
   $(".Prompt-RemoveDoctor").siblings().css("display","none");
 }
+
+//Telle JS Start
+
+// PROMPT MESSAGE / ADD ACCESS ACCOUNT
+function AddNewAccess() {
+  $(".Prompt-Message").css("display", "flex");
+  $(".Prompt-AccessAccount").css("display", "flex");
+  $(".Prompt-AccessAccount").siblings().css("display", "none");
+}
+
+//Telle JS End
 
 
 
