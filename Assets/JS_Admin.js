@@ -298,3 +298,22 @@ function InsertNewDoctor(InsertDoctor){
   });
 }
 
+function Yes_AddNewAccess(AccessAccount) {
+  PopMessages();
+  var data = {
+    AccessAccount: AccessAccount,
+    AccessUsername: $("#AccessUsername").val(),
+    AccessType: $("#AccessType").val(),
+  };
+  $.ajax({
+    url: "../Components/Function_Admin.php",
+    type: "post",
+    data: data,
+    success: function (response) {
+      console.log(response);
+      
+    },
+  });
+}
+
+
