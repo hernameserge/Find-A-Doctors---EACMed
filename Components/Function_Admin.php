@@ -214,7 +214,7 @@ if (isset($_POST["Yes_ResetPasswordAdmin_ID"])) {
       if ($Admin_Password === $AdminDefaultPass) {
         echo "Cannot be changed";
       } else {
-        // UPDATE RESET PASSWORD
+        // UPDATE RESET PASSWORD - ADMIN
         $ResetPasswordQuery = "UPDATE admin_accounts SET
         admin_password = '$AdminDefaultPass'
         WHERE admin_id = '$Admin_ID'";
