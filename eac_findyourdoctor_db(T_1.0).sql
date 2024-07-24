@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2024 at 01:13 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Jul 24, 2024 at 09:07 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,26 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Table structure for table `admin_accounts`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `admin_accounts` (
   `admin_id` int(11) NOT NULL,
   `admin_username` varchar(255) NOT NULL,
   `admin_password` varchar(255) NOT NULL,
   `admin_name` varchar(255) NOT NULL,
   `admin_email` varchar(255) NOT NULL,
+  `admin_account_status` varchar(255) NOT NULL COMMENT '"NEW" "OLD"',
   `admin_status` varchar(255) NOT NULL DEFAULT 'ACTIVE' COMMENT '"ACTIVE, INACTIVE"',
-  `account_access` varchar(255) NOT NULL
+  `account_access` varchar(255) NOT NULL,
+  `account_created_timestamp` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `admin`
+-- Dumping data for table `admin_accounts`
 --
 
-INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`, `admin_name`, `admin_email`, `admin_status`, `account_access`) VALUES
-(1, 'marc', '$2y$10$ZkgThNp4XqRGDaXyuXVtr.5RGI0DsFW3Bop9MW1m.ZE7WVT6AnHvO', '', '', 'ACTIVE', 'Super Admin'),
-(2, 'lee', '$2y$10$ipHz8QTqeErxQ5yHq9mvc.kNT4Byd7l4Zy5g.M6vIz.CdgR.7luJ2', '', '', 'ACTIVE', 'Admin');
+INSERT INTO `admin_accounts` (`admin_id`, `admin_username`, `admin_password`, `admin_name`, `admin_email`, `admin_account_status`, `admin_status`, `account_access`, `account_created_timestamp`) VALUES
+(1, 'marc', '$2y$10$ZkgThNp4XqRGDaXyuXVtr.5RGI0DsFW3Bop9MW1m.ZE7WVT6AnHvO', '', '', '', 'Active', 'Super Admin', '0000-00-00 00:00:00'),
+(2, 'lee', '$2y$10$ipHz8QTqeErxQ5yHq9mvc.kNT4Byd7l4Zy5g.M6vIz.CdgR.7luJ2', '', '', '', 'Active', 'Admin', '0000-00-00 00:00:00'),
+(3, 'test', '$2y$10$TX6XGGHg9b5BrZuHA6bJCOa9scgvdYtv1CUc1S1oQIcVPPES5SpyW', '', '', 'New', 'Inactive', 'Admin', '0000-00-00 00:00:00'),
+(9, 'telle', '$2y$10$TX6XGGHg9b5BrZuHA6bJCOa9scgvdYtv1CUc1S1oQIcVPPES5SpyW', '', '', 'New', 'Active', 'Super Admin', '2024-07-24 11:48:06'),
+(11, 'test_2', '$2y$10$TX6XGGHg9b5BrZuHA6bJCOa9scgvdYtv1CUc1S1oQIcVPPES5SpyW', '', '', 'New', 'Active', 'Admin', '2024-07-24 12:53:40');
 
 -- --------------------------------------------------------
 
@@ -576,9 +581,9 @@ INSERT INTO `sub_specialization` (`sub_specialization_id`, `sub_specs_id`, `sub_
 --
 
 --
--- Indexes for table `admin`
+-- Indexes for table `admin_accounts`
 --
-ALTER TABLE `admin`
+ALTER TABLE `admin_accounts`
   ADD PRIMARY KEY (`admin_id`);
 
 --
@@ -682,10 +687,10 @@ ALTER TABLE `sub_specialization`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table `admin_accounts`
 --
-ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `admin_accounts`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `admin_activity_logs`
