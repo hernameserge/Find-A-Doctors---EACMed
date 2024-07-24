@@ -1,6 +1,6 @@
 function LinkToLogout(){
   location.href = "../Admin - Panel/Logout.php";
-  console.log("Logout successfully");
+  console.log("Logout successfully!");
 }
 
 function BTNDashboard(){
